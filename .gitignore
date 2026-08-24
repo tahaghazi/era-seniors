@@ -1,0 +1,10 @@
+# Original WhatsApp exports — already copied and renamed into assets/img/
+WhatsApp Image*
+WhatsApp Unknown*
+
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/

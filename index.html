@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ERA SENIORS — Seniors. Wear. Strategy.</title>
+<meta name="description" content="ERA Seniors designs and manufactures graduation-class apparel. We don't just make clothes — we are the architects of your historical era. Est. 2026." />
+<meta name="theme-color" content="#4A0A14" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ERA SENIORS — Seniors. Wear. Strategy." />
+<meta property="og:description" content="Graduation-class apparel, designed and manufactured in-house. Est. 2026." />
+<meta property="og:image" content="assets/img/brand/logo-mark.jpeg" />
+
+<link rel="icon" href="assets/img/brand/logo-mark.jpeg" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          wine:      '#4A0A14',
+          maroon:    '#6B1220',
+          burgundy:  '#A81F3D',
+          ember:     '#D62128',
+          gold:      '#F5A623',
+          champagne: '#F3D3BA',
+          bone:      '#F1EFE6',
+          navy:      '#1E2749',
+          mocha:     '#8A5A44',
+          ink:       '#0F0F12'
+        },
+        fontFamily: {
+          serif: ['"Bodoni Moda"', 'Georgia', 'serif'],
+          sans:  ['Inter', 'system-ui', 'sans-serif'],
+          poster:['Anton', 'Impact', 'sans-serif'],
+          ar:    ['"IBM Plex Sans Arabic"', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="font-sans bg-ink text-bone antialiased">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     PRELOADER
+     ══════════════════════════════════════════════════════════════════════ -->
+<div id="preloader" class="mesh-wine grain overflow-hidden">
+  <div class="relative z-10 flex flex-col items-center gap-8 px-6">
+    <div class="text-center">
+      <div class="logotype text-champagne text-6xl sm:text-7xl">ERA</div>
+      <div class="mt-3 text-[10px] tracking-brand text-champagne/70">SENIORS</div>
+    </div>
+    <div id="loader-bar" class="loader-bar"><span></span></div>
+    <div class="flex items-center gap-3 text-[10px] tracking-[0.3em] text-champagne/60">
+      <span id="loader-pct">000</span><span>%</span>
+    </div>
+  </div>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursor-ring" aria-hidden="true"><span class="cursor-text" id="cursor-text"></span></div>
+
+<!-- Scroll progress -->
+<div class="fixed top-0 left-0 right-0 h-[2px] z-[120] bg-transparent" aria-hidden="true">
+  <div id="progress" class="h-full bg-gradient-to-r from-ember via-burgundy to-champagne"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     NAV
+     ══════════════════════════════════════════════════════════════════════ -->
+<header id="nav" class="fixed top-0 inset-x-0 z-[100] border-b border-transparent">
+  <nav class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14 h-[74px] flex items-center justify-between">
+
+    <a href="#top" class="flex items-baseline gap-2.5 shrink-0" aria-label="ERA Seniors — home">
+      <span class="logotype text-champagne text-[26px] leading-none">ERA</span>
+      <span class="text-[8px] tracking-brand text-champagne/60 hidden sm:block">SENIORS</span>
+    </a>
+
+    <div class="hidden lg:flex items-center gap-9 text-[11px] tracking-[0.2em] uppercase text-bone/70">
+      <a href="#story"       class="nav-link" data-en="Story"       data-ar="قصتنا">Story</a>
+      <a href="#identity"    class="nav-link" data-en="Identity"    data-ar="الهوية">Identity</a>
+      <a href="#banners"     class="nav-link" data-en="Banners"     data-ar="البانرات">Banners</a>
+      <a href="#collections" class="nav-link" data-en="Collections" data-ar="التشكيلات">Collections</a>
+      <a href="#team"        class="nav-link" data-en="Team"        data-ar="الفريق">Team</a>
+      <a href="#process"     class="nav-link" data-en="Process"     data-ar="الخطوات">Process</a>
+    </div>
+
+    <div class="flex items-center gap-3 sm:gap-5">
+      <button data-lang-toggle
+              class="text-[10px] tracking-[0.2em] w-9 h-9 grid place-items-center rounded-full border border-champagne/25 text-champagne/80 hover:border-champagne hover:text-champagne transition-colors"
+              aria-label="Switch language between English and Arabic">AR</button>
+
+      <a href="#contact" data-magnetic="0.3"
+         class="btn hidden sm:inline-flex px-6 py-3 border border-champagne/35 text-[10px] tracking-[0.2em] uppercase"
+         style="--btn-fill:#F3D3BA">
+        <span class="btn-label text-champagne" data-en="Start a class order" data-ar="اطلب لدفعتك">Start a class order</span>
+      </a>
+
+      <button id="burger" class="burger lg:hidden w-10 h-10 grid place-items-center gap-[5px]"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="block w-6 h-[1.5px] bg-bone"></span>
+        <span class="block w-6 h-[1.5px] bg-bone"></span>
+        <span class="block w-6 h-[1.5px] bg-bone"></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="fixed inset-0 z-[95] mesh-wine grain lg:hidden">
+  <div class="relative z-10 h-full flex flex-col justify-center px-8 gap-1">
+    <a href="#story"       class="logotype text-5xl text-bone py-2" data-en="Story"       data-ar="قصتنا">Story</a>
+    <a href="#identity"    class="logotype text-5xl text-bone py-2" data-en="Identity"    data-ar="الهوية">Identity</a>
+    <a href="#banners"     class="logotype text-5xl text-bone py-2" data-en="Banners"     data-ar="البانرات">Banners</a>
+    <a href="#collections" class="logotype text-5xl text-bone py-2" data-en="Collections" data-ar="التشكيلات">Collections</a>
+    <a href="#team"        class="logotype text-5xl text-bone py-2" data-en="Team"        data-ar="الفريق">Team</a>
+    <a href="#process"     class="logotype text-5xl text-bone py-2" data-en="Process"     data-ar="الخطوات">Process</a>
+    <a href="#contact"     class="logotype text-5xl text-champagne py-2" data-en="Contact" data-ar="تواصل">Contact</a>
+    <div class="mt-10 text-[10px] tracking-brand text-champagne/50">EST. 2026 — @ERA_SENIORS</div>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="relative min-h-[100svh] mesh-wine grain overflow-hidden flex flex-col">
+
+  <!-- Floating poster fragments (parallax) -->
+  <div class="pointer-events-none absolute inset-0 hidden md:block" aria-hidden="true">
+    <img src="assets/img/designs/seniors-cover.jpeg" alt=""
+         data-speed="-1.4"
+         class="absolute left-[3%] top-[20%] w-[150px] lg:w-[195px] rotate-[-8deg] rounded-sm shadow-2xl shadow-black/60 opacity-90" />
+    <img src="assets/img/designs/new-era.jpeg" alt=""
+         data-speed="1.9"
+         class="absolute right-[4%] top-[16%] w-[135px] lg:w-[175px] rotate-[7deg] rounded-sm shadow-2xl shadow-black/60 opacity-90" />
+    <img src="assets/img/designs/quarter.jpeg" alt=""
+         data-speed="-2.4"
+         class="absolute right-[9%] bottom-[12%] w-[120px] lg:w-[155px] rotate-[-5deg] rounded-sm shadow-2xl shadow-black/60 opacity-80" />
+  </div>
+
+  <!-- Corner marks -->
+  <div class="relative z-10 pt-[92px] px-5 sm:px-8 lg:px-14 flex justify-between text-[10px] tracking-brand text-bone/60">
+    <span>EST. 2026</span>
+    <span class="hidden sm:block">CAIRO · CAMPUS</span>
+    <span>@ERA_SENIORS</span>
+  </div>
+
+  <!-- Centre lockup -->
+  <div class="relative z-10 flex-1 grid place-items-center px-5 text-center">
+    <div>
+      <div class="flex items-center justify-center gap-4 sm:gap-8 text-[9px] sm:text-[10px] tracking-brand text-bone/70 mb-8"
+           data-reveal style="--d:200ms">
+        <span data-en="SENIORS" data-ar="الدفعات">SENIORS</span>
+        <span class="w-8 h-px bg-bone/30"></span>
+        <span data-en="WEAR" data-ar="ملابس">WEAR</span>
+        <span class="w-8 h-px bg-bone/30"></span>
+        <span data-en="STRATEGY" data-ar="استراتيجية">STRATEGY</span>
+      </div>
+
+      <h1 class="hero-word text-champagne" data-split>ERA</h1>
+
+      <div class="mt-4 sm:mt-6 text-[11px] sm:text-[13px] tracking-brand text-champagne/80" data-reveal style="--d:900ms">
+        S E N I O R S
+      </div>
+
+      <p class="mt-10 max-w-[46ch] mx-auto text-[15px] sm:text-[17px] leading-relaxed text-bone/80 font-serif italic"
+         data-reveal style="--d:1050ms"
+         data-en="We don't just make clothes. We are the architects of your historical era."
+         data-ar="احنا مش بس بنعمل هدوم. احنا مهندسين الحقبة التاريخية بتاعتك.">
+        We don't just make clothes. We are the architects of your historical era.
+      </p>
+
+      <div class="mt-11 flex flex-col sm:flex-row items-center justify-center gap-4" data-reveal style="--d:1200ms">
+        <a href="#collections" data-magnetic="0.28" data-cursor="View"
+           class="btn px-9 py-4 bg-champagne text-ink text-[10px] tracking-[0.22em] uppercase w-full sm:w-auto"
+           style="--btn-fill:#D62128;--btn-text:#fff">
+          <span class="btn-label" data-en="See the collections" data-ar="شوف التشكيلات">See the collections</span>
+          <span class="arrow rtl-flip">&rarr;</span>
+        </a>
+        <a href="#story" data-magnetic="0.28"
+           class="btn px-9 py-4 border border-bone/30 text-[10px] tracking-[0.22em] uppercase w-full sm:w-auto"
+           style="--btn-fill:#F1EFE6">
+          <span class="btn-label text-bone" data-en="Who we are" data-ar="احنا مين">Who we are</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero marquee -->
+  <div class="relative z-10 border-t border-bone/15 py-4 marquee" style="--speed:36s">
+    <div class="marquee__track text-[11px] tracking-brand text-bone/55">
+      <span>SENIORS COLLECTION</span><span>&#9670;</span>
+      <span>SEMI / SENIORS 2027</span><span>&#9670;</span>
+      <span>VARSITY JACKETS</span><span>&#9670;</span>
+      <span>QUARTER ZIPS</span><span>&#9670;</span>
+      <span>CLASS OF YOUR ERA</span><span>&#9670;</span>
+      <span>DESIGNED &amp; MANUFACTURED IN-HOUSE</span><span>&#9670;</span>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2" aria-hidden="true">
+    <span class="text-[9px] tracking-brand text-bone/40">SCROLL</span>
+    <span class="block w-px h-10 bg-gradient-to-b from-bone/50 to-transparent"></span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     MANIFESTO
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="relative bg-ink py-24 sm:py-32 lg:py-44 overflow-hidden">
+  <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+
+    <div class="lg:col-span-5 order-2 lg:order-1" data-reveal="left">
+      <div class="relative">
+        <img src="assets/img/brand/banner-manifesto.jpeg"
+             alt="ERA Seniors manifesto banner: we don't just make clothes, we are the architects of your historical era"
+             class="w-full rounded-sm shadow-2xl shadow-black/70" />
+        <div class="absolute -bottom-5 -right-5 bg-ember text-white px-5 py-3 text-[9px] tracking-brand hidden sm:block">
+          MANIFESTO
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7 order-1 lg:order-2" data-stagger="120">
+      <div class="flex items-center gap-4 mb-8" data-reveal>
+        <span class="w-10 h-px bg-ember"></span>
+        <span class="text-[10px] tracking-brand text-ember" data-en="01 — MANIFESTO" data-ar="٠١ — البيان">01 — MANIFESTO</span>
+      </div>
+
+      <h2 class="font-serif text-[clamp(2rem,5vw,4rem)] leading-[1.06] text-bone" data-reveal
+          data-en="Every graduating class deserves to live its details differently."
+          data-ar="كل دفعة تستحق تعيش تفاصيلها بشكل مختلف.">
+        Every graduating class deserves to live its details differently.
+      </h2>
+
+      <p class="mt-8 max-w-[58ch] text-[15px] leading-[1.85] text-bone/65" data-reveal
+         data-en="A graduation jacket is not merchandise. It is the last object a class makes together — the thing people still own a decade later. So we treat it that way: considered silhouettes, real fabric weights, and a design language that holds up long after the ceremony."
+         data-ar="جاكيت التخرج مش مجرد منتج. دي آخر حاجة الدفعة بتعملها مع بعض — الحاجة اللي الناس بتفضل محتفظة بيها بعد عشر سنين. علشان كده بنتعامل معاها كده: قصات مدروسة، خامات بوزن حقيقي، ولغة تصميم بتفضل حلوة بعد الحفلة بكتير.">
+        A graduation jacket is not merchandise. It is the last object a class makes together — the thing people still own a decade later. So we treat it that way: considered silhouettes, real fabric weights, and a design language that holds up long after the ceremony.
+      </p>
+
+      <!-- Stat strip -->
+      <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-px bg-bone/10 border border-bone/10" data-stagger="90">
+        <div class="bg-ink p-6" data-reveal>
+          <div class="stat-num font-serif text-4xl text-champagne" data-count="2026">0</div>
+          <div class="mt-2 text-[9px] tracking-brand text-bone/45" data-en="ESTABLISHED" data-ar="التأسيس">ESTABLISHED</div>
+        </div>
+        <div class="bg-ink p-6" data-reveal>
+          <div class="stat-num font-serif text-4xl text-champagne"><span data-count="2">0</span></div>
+          <div class="mt-2 text-[9px] tracking-brand text-bone/45" data-en="COLLECTIONS LIVE" data-ar="تشكيلات">COLLECTIONS LIVE</div>
+        </div>
+        <div class="bg-ink p-6" data-reveal>
+          <div class="stat-num font-serif text-4xl text-champagne">S&ndash;XXL</div>
+          <div class="mt-2 text-[9px] tracking-brand text-bone/45" data-en="SIZE RANGE" data-ar="المقاسات">SIZE RANGE</div>
+        </div>
+        <div class="bg-ink p-6" data-reveal>
+          <div class="stat-num font-serif text-4xl text-champagne"><span data-count="100" data-suffix="%">0</span></div>
+          <div class="mt-2 text-[9px] tracking-brand text-bone/45" data-en="IN-HOUSE PRODUCTION" data-ar="تصنيع داخلي">IN-HOUSE PRODUCTION</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     STORY
+     ══════════════════════════════════════════════════════════════════════ -->
+<section id="story" class="relative mesh-ember grain py-24 sm:py-32 lg:py-44 overflow-hidden scroll-mt-20">
+  <div class="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+
+    <div class="flex items-center gap-4 mb-14" data-reveal>
+      <span class="w-10 h-px bg-champagne"></span>
+      <span class="text-[10px] tracking-brand text-champagne" data-en="02 — WHO WE ARE" data-ar="٠٢ — احنا مين">02 — WHO WE ARE</span>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+
+      <div class="lg:col-span-6" data-stagger="130">
+        <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone" data-reveal
+            data-en="Students who understand the class. Makers who can build it."
+            data-ar="طلبة فاهمين الدفعة. ومصنّعين قادرين ينفذوا.">
+          Students who understand the class. Makers who can build it.
+        </h2>
+
+        <!-- Original Arabic copy from the brand deck -->
+        <div class="mt-10 border-l-2 border-ember/60 pl-6" data-reveal>
+          <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" dir="rtl">
+            إحنا فريق من الطلبة وأصحاب المصانع، جمعنا بين فهمنا للدفعات واحتياجاتها،
+            وبين خبرة التصنيع والتنفيذ؛ علشان نقدم تجربة متكاملة للدفعة، مش مجرد قطعة ملابس.
+          </p>
+          <p class="mt-5 text-[13px] leading-[1.9] text-bone/50 italic">
+            &ldquo;We are a team of students and factory owners. We combined our understanding of
+            graduating classes and what they need with real manufacturing and execution experience —
+            so we can deliver a complete experience for the class, not just a garment.&rdquo;
+          </p>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-2 gap-8" data-stagger="100">
+          <div data-reveal>
+            <div class="text-[10px] tracking-brand text-ember mb-3" data-en="THE STUDENT SIDE" data-ar="جانب الطلبة">THE STUDENT SIDE</div>
+            <p class="text-[14px] leading-[1.85] text-bone/65"
+               data-en="We sit where you sit. We know the committee votes, the budget arguments, the group chat at 2am, and the deadline that is always sooner than it looks."
+               data-ar="إحنا قاعدين في نفس مكانك. عارفين تصويت اللجنة، ونقاشات الميزانية، والجروب الساعة ٢ بالليل، والديدلاين اللي دايمًا أقرب مما تتخيل.">
+              We sit where you sit. We know the committee votes, the budget arguments, the group chat at 2am, and the deadline that is always sooner than it looks.
+            </p>
+          </div>
+          <div data-reveal>
+            <div class="text-[10px] tracking-brand text-gold mb-3" data-en="THE FACTORY SIDE" data-ar="جانب المصنع">THE FACTORY SIDE</div>
+            <p class="text-[14px] leading-[1.85] text-bone/65"
+               data-en="Our partners own the production line. That means honest lead times, controlled fabric quality, and a price that has no middleman folded into it."
+               data-ar="شركاؤنا بيمتلكوا خط الإنتاج. يعني مواعيد تسليم صادقة، وجودة خامة متحكم فيها، وسعر من غير وسيط.">
+              Our partners own the production line. That means honest lead times, controlled fabric quality, and a price that has no middleman folded into it.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 grid grid-cols-2 gap-4 sm:gap-6" data-stagger="140">
+        <img src="assets/img/brand/banner-story.jpeg" data-reveal="scale"
+             alt="ERA Seniors brand banner — who we are and our story, in Arabic"
+             class="w-full rounded-sm shadow-2xl shadow-black/60" />
+        <img src="assets/img/brand/banner-about.jpeg" data-reveal="scale"
+             alt="ERA Seniors brand banner — what we are about, in Arabic"
+             class="w-full rounded-sm shadow-2xl shadow-black/60 mt-10" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     BRAND IDENTITY
+     ══════════════════════════════════════════════════════════════════════ -->
+<section id="identity" class="relative bg-ink py-24 sm:py-32 lg:py-44 scroll-mt-20">
+  <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16" data-stagger="100">
+      <div data-reveal>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="w-10 h-px bg-champagne"></span>
+          <span class="text-[10px] tracking-brand text-champagne" data-en="03 — BRAND IDENTITY" data-ar="٠٣ — الهوية">03 — BRAND IDENTITY</span>
+        </div>
+        <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone"
+            data-en="The system behind the look." data-ar="النظام اللي ورا الشكل.">
+          The system behind the look.
+        </h2>
+      </div>
+      <p class="max-w-[38ch] text-[14px] leading-[1.85] text-bone/55" data-reveal
+         data-en="One palette, one logotype, one voice — applied the same way across every jacket, banner and post."
+         data-ar="لوحة ألوان واحدة، لوجو واحد، صوت واحد — بيتطبقوا بنفس الطريقة على كل جاكيت وبانر وبوست.">
+        One palette, one logotype, one voice — applied the same way across every jacket, banner and post.
+      </p>
+    </div>
+
+    <!-- Logo lockups -->
+    <div class="grid md:grid-cols-3 gap-5 mb-20" data-stagger="120">
+
+      <div class="relative overflow-hidden rounded-sm aspect-[4/3] tilt" data-reveal="scale" data-tilt="6">
+        <img src="assets/img/brand/logo-mark.jpeg" alt="ERA Seniors primary logotype on wine gradient"
+             class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-ink/95 to-transparent">
+          <div class="text-[10px] tracking-brand text-champagne">PRIMARY LOCKUP</div>
+          <div class="text-[11px] text-bone/50 mt-1">Champagne on wine gradient</div>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-sm aspect-[4/3] bg-bone grid place-items-center tilt" data-reveal="scale" data-tilt="6">
+        <div class="text-center">
+          <div class="logotype text-wine text-6xl">ERA</div>
+          <div class="mt-2 text-[8px] tracking-brand text-wine/70">SENIORS</div>
+        </div>
+        <div class="absolute bottom-0 inset-x-0 p-5">
+          <div class="text-[10px] tracking-brand text-wine">INVERSE LOCKUP</div>
+          <div class="text-[11px] text-wine/50 mt-1">Wine on bone — print &amp; labels</div>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-sm aspect-[4/3] bg-navy grid place-items-center tilt" data-reveal="scale" data-tilt="6">
+        <div class="text-center">
+          <div class="logotype text-champagne text-7xl">E</div>
+          <div class="mt-2 text-[8px] tracking-brand text-champagne/60">MONOGRAM</div>
+        </div>
+        <div class="absolute bottom-0 inset-x-0 p-5">
+          <div class="text-[10px] tracking-brand text-champagne">EMBROIDERY MARK</div>
+          <div class="text-[11px] text-bone/40 mt-1">Chest &amp; sleeve applications</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Palette -->
+    <div class="mb-6 flex items-center justify-between" data-reveal>
+      <h3 class="text-[10px] tracking-brand text-bone/50" data-en="BRAND PALETTE" data-ar="لوحة الألوان">BRAND PALETTE</h3>
+      <span class="text-[10px] tracking-brand text-bone/35" data-en="CLICK A SWATCH TO COPY" data-ar="اضغط لنسخ الكود">CLICK A SWATCH TO COPY</span>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4" data-stagger="70">
+      <!-- Each swatch copies its hex on click -->
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#4A0A14" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-32 sm:h-40" style="background:#4A0A14"></div>
+        <div class="p-4 bg-white/[0.03]">
+          <div class="text-[12px] text-bone">Deep Wine</div>
+          <div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#4A0A14</div>
+        </div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#6B1220" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-32 sm:h-40" style="background:#6B1220"></div>
+        <div class="p-4 bg-white/[0.03]">
+          <div class="text-[12px] text-bone">Maroon</div>
+          <div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#6B1220</div>
+        </div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#A81F3D" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-32 sm:h-40" style="background:#A81F3D"></div>
+        <div class="p-4 bg-white/[0.03]">
+          <div class="text-[12px] text-bone">Burgundy Rose</div>
+          <div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#A81F3D</div>
+        </div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#D62128" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-32 sm:h-40" style="background:#D62128"></div>
+        <div class="p-4 bg-white/[0.03]">
+          <div class="text-[12px] text-bone">Poster Red</div>
+          <div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#D62128</div>
+        </div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#F5A623" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-32 sm:h-40" style="background:#F5A623"></div>
+        <div class="p-4 bg-white/[0.03]">
+          <div class="text-[12px] text-bone">Marigold</div>
+          <div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#F5A623</div>
+        </div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#F3D3BA" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-32 sm:h-40" style="background:#F3D3BA"></div>
+        <div class="p-4 bg-white/[0.03]">
+          <div class="text-[12px] text-bone">Champagne</div>
+          <div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#F3D3BA</div>
+        </div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#F1EFE6" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-32 sm:h-40" style="background:#F1EFE6"></div>
+        <div class="p-4 bg-white/[0.03]">
+          <div class="text-[12px] text-bone">Bone</div>
+          <div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#F1EFE6</div>
+        </div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#1E2749" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-32 sm:h-40" style="background:#1E2749"></div>
+        <div class="p-4 bg-white/[0.03]">
+          <div class="text-[12px] text-bone">Varsity Navy</div>
+          <div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#1E2749</div>
+        </div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#8A5A44" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-32 sm:h-40" style="background:#8A5A44"></div>
+        <div class="p-4 bg-white/[0.03]">
+          <div class="text-[12px] text-bone">Mocha</div>
+          <div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#8A5A44</div>
+        </div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#0F0F12" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-32 sm:h-40 border border-white/10" style="background:#0F0F12"></div>
+        <div class="p-4 bg-white/[0.03]">
+          <div class="text-[12px] text-bone">Ink</div>
+          <div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#0F0F12</div>
+        </div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+    </div>
+
+    <!-- Typography -->
+    <div class="mt-20 grid md:grid-cols-3 gap-px bg-bone/10 border border-bone/10" data-stagger="110">
+      <div class="bg-ink p-8 sm:p-10" data-reveal>
+        <div class="text-[10px] tracking-brand text-bone/40 mb-6">DISPLAY / LOGOTYPE</div>
+        <div class="logotype text-6xl text-champagne mb-4">Aa</div>
+        <div class="text-[13px] text-bone">Bodoni Moda</div>
+        <p class="mt-3 text-[12px] leading-[1.8] text-bone/45">High-contrast serif. Used for the logotype, headlines and pull quotes.</p>
+      </div>
+      <div class="bg-ink p-8 sm:p-10" data-reveal>
+        <div class="text-[10px] tracking-brand text-bone/40 mb-6">POSTER / CAMPAIGN</div>
+        <div class="font-poster text-6xl text-ember mb-4 uppercase">Aa</div>
+        <div class="text-[13px] text-bone">Anton</div>
+        <p class="mt-3 text-[12px] leading-[1.8] text-bone/45">Condensed heavyweight for campaign covers and drop announcements.</p>
+      </div>
+      <div class="bg-ink p-8 sm:p-10" data-reveal>
+        <div class="text-[10px] tracking-brand text-bone/40 mb-6">UI / BODY &amp; ARABIC</div>
+        <div class="text-6xl text-bone mb-4 font-light">Aa <span class="font-ar">أ</span></div>
+        <div class="text-[13px] text-bone">Inter · IBM Plex Sans Arabic</div>
+        <p class="mt-3 text-[12px] leading-[1.8] text-bone/45">Bilingual body copy, product specs, size charts and captions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     BANNERS
+     ══════════════════════════════════════════════════════════════════════ -->
+<section id="banners" class="relative bg-wine py-24 sm:py-32 overflow-hidden scroll-mt-20">
+  <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14 mb-12">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6" data-stagger="100">
+      <div data-reveal>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="w-10 h-px bg-champagne"></span>
+          <span class="text-[10px] tracking-brand text-champagne" data-en="04 — BUSINESS BANNERS" data-ar="٠٤ — بانرات الأعمال">04 — BUSINESS BANNERS</span>
+        </div>
+        <h2 class="font-serif text-[clamp(2rem,5vw,4rem)] leading-[1.02] text-bone"
+            data-en="Banners built for the feed." data-ar="بانرات مصممة للسوشيال.">
+          Banners built for the feed.
+        </h2>
+      </div>
+      <p class="max-w-[34ch] text-[13px] leading-[1.85] text-bone/55" data-reveal
+         data-en="Story, post and cover formats sharing one gradient, one grain and one typographic rhythm. Drag to browse."
+         data-ar="مقاسات ستوري وبوست وكوفر بنفس التدرج ونفس الجرين ونفس الإيقاع الطباعي. اسحب للتصفح.">
+        Story, post and cover formats sharing one gradient, one grain and one typographic rhythm. Drag to browse.
+      </p>
+    </div>
+  </div>
+
+  <div class="hscroll flex gap-5 overflow-x-auto pb-8 px-5 sm:px-8 lg:px-14 snap-x snap-mandatory cursor-grab select-none">
+    <figure class="snap-start shrink-0 w-[240px] sm:w-[300px]" data-reveal="scale">
+      <img src="assets/img/brand/banner-gradient.jpeg" alt="ERA Seniors story banner — gradient with brand marks"
+           class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
+      <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">STORY 9:16 — GRADIENT BASE</figcaption>
+    </figure>
+    <figure class="snap-start shrink-0 w-[300px] sm:w-[380px]" data-reveal="scale">
+      <img src="assets/img/brand/logo-mark.jpeg" alt="ERA Seniors logo banner"
+           class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
+      <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">COVER 16:11 — LOGOTYPE</figcaption>
+    </figure>
+    <figure class="snap-start shrink-0 w-[280px] sm:w-[340px]" data-reveal="scale">
+      <img src="assets/img/brand/banner-manifesto.jpeg" alt="ERA Seniors manifesto banner"
+           class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
+      <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">POST 4:5 — MANIFESTO</figcaption>
+    </figure>
+    <figure class="snap-start shrink-0 w-[280px] sm:w-[340px]" data-reveal="scale">
+      <img src="assets/img/brand/banner-about.jpeg" alt="ERA Seniors about banner in Arabic"
+           class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
+      <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">POST 4:5 — WHAT WE ARE ABOUT</figcaption>
+    </figure>
+    <figure class="snap-start shrink-0 w-[280px] sm:w-[340px]" data-reveal="scale">
+      <img src="assets/img/brand/banner-story.jpeg" alt="ERA Seniors story banner in Arabic"
+           class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
+      <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">POST 4:5 — OUR STORY</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     COLLECTIONS / SAMPLE DESIGNS
+     ══════════════════════════════════════════════════════════════════════ -->
+<section id="collections" class="relative bg-ink py-24 sm:py-32 lg:py-40 scroll-mt-20">
+  <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14" data-stagger="100">
+      <div data-reveal>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="w-10 h-px bg-ember"></span>
+          <span class="text-[10px] tracking-brand text-ember" data-en="05 — SAMPLE DESIGNS" data-ar="٠٥ — نماذج التصميم">05 — SAMPLE DESIGNS</span>
+        </div>
+        <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone"
+            data-en="Selected work." data-ar="مختارات من شغلنا.">Selected work.</h2>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap gap-2" data-reveal>
+        <button class="filter-btn active px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase"
+                data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase"
+                data-filter="seniors" aria-pressed="false">Seniors</button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase"
+                data-filter="semi" aria-pressed="false">Semi / 2027</button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase"
+                data-filter="campaign" aria-pressed="false">Campaign</button>
+      </div>
+    </div>
+
+    <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-stagger="90">
+
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+               data-cat="seniors campaign" data-title="Futures — Winter Varsity" data-tag="Seniors Collection · Winter" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/futures.jpeg" alt="FUTURES campaign poster — navy and cream ERA varsity jackets" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="tile__overlay absolute inset-0"></div>
+        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · WINTER</div>
+          <div class="font-serif text-2xl text-bone">Futures</div>
+        </div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">01</div>
+      </article>
+
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+               data-cat="seniors" data-title="New Collection — Coming Soon" data-tag="Seniors Collection · Teaser" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/new-collection.jpeg" alt="New collection coming soon teaser — ERA varsity jacket" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="tile__overlay absolute inset-0"></div>
+        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · TEASER</div>
+          <div class="font-serif text-2xl text-bone">New Collection</div>
+        </div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">02</div>
+      </article>
+
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+               data-cat="campaign" data-title="Seniors — Fall Issue" data-tag="Campaign · Editorial cover" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/seniors-cover.jpeg" alt="SENIORS fall issue magazine-style cover in red and cyan" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="tile__overlay absolute inset-0"></div>
+        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="text-[9px] tracking-brand text-champagne mb-2">CAMPAIGN · COVER</div>
+          <div class="font-serif text-2xl text-bone">Fall Issue</div>
+        </div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">03</div>
+      </article>
+
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+               data-cat="seniors" data-title="Seniors Collection — Key Visual" data-tag="Seniors Collection · Key visual" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/seniors-collection.jpeg" alt="Seniors Collection key visual on warm taupe backdrop" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="tile__overlay absolute inset-0"></div>
+        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · KEY VISUAL</div>
+          <div class="font-serif text-2xl text-bone">Seniors Collection</div>
+        </div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">04</div>
+      </article>
+
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+               data-cat="campaign" data-title="Do More Of What You Love" data-tag="Campaign · Daily motivation" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/do-more.jpeg" alt="Do more of what you love — red typographic campaign poster" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="tile__overlay absolute inset-0"></div>
+        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="text-[9px] tracking-brand text-champagne mb-2">CAMPAIGN · SOCIAL</div>
+          <div class="font-serif text-2xl text-bone">Do More</div>
+        </div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">05</div>
+      </article>
+
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+               data-cat="semi" data-title="Semi Seniors — NEW" data-tag="Semi / Seniors 2027 · Drop" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/new-quarterzip.jpeg" alt="ERA Semi Seniors quarter-zip with hand-drawn NEW lettering" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="tile__overlay absolute inset-0"></div>
+        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SEMI · DROP</div>
+          <div class="font-serif text-2xl text-bone">New Quarter Zip</div>
+        </div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">06</div>
+      </article>
+
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+               data-cat="semi campaign" data-title="Limited Pieces. Sharp Tailoring." data-tag="Semi / Seniors 2027 · Editorial" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/limited-pieces.jpeg" alt="Editorial layout with numbered notes over a maroon and black quarter-zip" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="tile__overlay absolute inset-0"></div>
+        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SEMI · EDITORIAL</div>
+          <div class="font-serif text-2xl text-bone">Limited Pieces</div>
+        </div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">07</div>
+      </article>
+
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+               data-cat="semi" data-title="New Era — Casual Seniors Wear" data-tag="Semi / Seniors 2027 · Poster" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/new-era.jpeg" alt="NEW ERA poster in red and marigold with maroon quarter-zip" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="tile__overlay absolute inset-0"></div>
+        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SEMI · POSTER</div>
+          <div class="font-serif text-2xl text-bone">New Era</div>
+        </div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">08</div>
+      </article>
+
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+               data-cat="semi" data-title="Semi / Senior 2027 — Lookbook" data-tag="Semi / Seniors 2027 · Lookbook" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/browser-stack.jpeg" alt="Stacked browser-window lookbook layout on a red court backdrop" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="tile__overlay absolute inset-0"></div>
+        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SEMI · LOOKBOOK</div>
+          <div class="font-serif text-2xl text-bone">Window Stack</div>
+        </div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">09</div>
+      </article>
+
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+               data-cat="semi campaign" data-title="Quarter — This Is The New Season" data-tag="Semi / Seniors 2027 · Campaign" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/quarter.jpeg" alt="QUARTER campaign layout over a maroon quarter-zip in an interior scene" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="tile__overlay absolute inset-0"></div>
+        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SEMI · CAMPAIGN</div>
+          <div class="font-serif text-2xl text-bone">Quarter</div>
+        </div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">10</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Divider marquee -->
+<div class="marquee bg-ember py-5" style="--speed:26s;--dir:reverse">
+  <div class="marquee__track font-poster text-4xl sm:text-6xl uppercase text-white/95">
+    <span>Semi / Seniors 2027</span><span class="text-white/40">&#10022;</span>
+    <span>Own the quarter</span><span class="text-white/40">&#10022;</span>
+    <span>Worn, noticed, remembered</span><span class="text-white/40">&#10022;</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     TEAM
+     ══════════════════════════════════════════════════════════════════════ -->
+<section id="team" class="relative bg-ink py-24 sm:py-32 lg:py-44 scroll-mt-20">
+  <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16" data-stagger="100">
+      <div data-reveal>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="w-10 h-px bg-champagne"></span>
+          <span class="text-[10px] tracking-brand text-champagne" data-en="06 — THE TEAM" data-ar="٠٦ — الفريق">06 — THE TEAM</span>
+        </div>
+        <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone"
+            data-en="Half campus. Half factory floor." data-ar="نص جامعة. ونص مصنع.">
+          Half campus. Half factory floor.
+        </h2>
+      </div>
+      <p class="max-w-[36ch] text-[13px] leading-[1.85] text-bone/55" data-reveal
+         data-en="Four people between the group chat and the cutting table. One of us is always the one you actually talk to."
+         data-ar="أربع أفراد بين جروب الدفعة وترابيزة القص. دايمًا في حد منهم هو اللي بتتكلم معاه فعلًا.">
+        Four people between the group chat and the cutting table. One of us is always the one you actually talk to.
+      </p>
+    </div>
+
+    <!--
+      ┌─────────────────────────────────────────────────────────────────┐
+      │ REPLACE ME: swap "Your Name" for the real names, and drop head- │
+      │ shots into assets/img/team/ then replace the monogram <div>     │
+      │ with <img src="assets/img/team/name.jpg" class="team-card__img  │
+      │ w-full h-full object-cover">                                     │
+      └─────────────────────────────────────────────────────────────────┘
+    -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" data-stagger="110">
+
+      <article class="team-card group" data-reveal="scale">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-wine grid place-items-center">
+          <span class="team-card__img logotype text-[110px] text-champagne/85 select-none">A</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-[9px] tracking-brand text-champagne/80">CO-FOUNDER</div>
+        </div>
+        <div class="pt-5">
+          <div class="team-card__rule h-px bg-champagne mb-4"></div>
+          <h3 class="font-serif text-2xl text-bone">Your Name</h3>
+          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45">Creative direction &amp; brand</p>
+          <p class="mt-4 text-[13px] leading-[1.8] text-bone/55">Owns the logotype, the palette and every campaign that goes out under it.</p>
+        </div>
+      </article>
+
+      <article class="team-card group" data-reveal="scale">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-maroon grid place-items-center">
+          <span class="team-card__img logotype text-[110px] text-champagne/85 select-none">B</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-[9px] tracking-brand text-champagne/80">CO-FOUNDER</div>
+        </div>
+        <div class="pt-5">
+          <div class="team-card__rule h-px bg-champagne mb-4"></div>
+          <h3 class="font-serif text-2xl text-bone">Your Name</h3>
+          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45">Production &amp; manufacturing</p>
+          <p class="mt-4 text-[13px] leading-[1.8] text-bone/55">Runs the line. Fabric sourcing, sampling, quality control and delivery dates.</p>
+        </div>
+      </article>
+
+      <article class="team-card group" data-reveal="scale">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-navy grid place-items-center">
+          <span class="team-card__img logotype text-[110px] text-champagne/85 select-none">C</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-[9px] tracking-brand text-champagne/80">PARTNER</div>
+        </div>
+        <div class="pt-5">
+          <div class="team-card__rule h-px bg-champagne mb-4"></div>
+          <h3 class="font-serif text-2xl text-bone">Your Name</h3>
+          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45">Campus partnerships</p>
+          <p class="mt-4 text-[13px] leading-[1.8] text-bone/55">Works with class committees — briefs, sizing days and on-campus fittings.</p>
+        </div>
+      </article>
+
+      <article class="team-card group" data-reveal="scale">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-mocha grid place-items-center">
+          <span class="team-card__img logotype text-[110px] text-wine/70 select-none">D</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-[9px] tracking-brand text-champagne/80">PARTNER</div>
+        </div>
+        <div class="pt-5">
+          <div class="team-card__rule h-px bg-champagne mb-4"></div>
+          <h3 class="font-serif text-2xl text-bone">Your Name</h3>
+          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45">Operations &amp; fulfilment</p>
+          <p class="mt-4 text-[13px] leading-[1.8] text-bone/55">Order tracking, size exchanges and getting every box to the right hand.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     PROCESS
+     ══════════════════════════════════════════════════════════════════════ -->
+<section id="process" class="relative mesh-ember grain py-24 sm:py-32 lg:py-44 scroll-mt-20 overflow-hidden">
+  <div class="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+
+    <div class="mb-16" data-reveal>
+      <div class="flex items-center gap-4 mb-6">
+        <span class="w-10 h-px bg-gold"></span>
+        <span class="text-[10px] tracking-brand text-gold" data-en="07 — HOW IT WORKS" data-ar="٠٧ — إزاي بنشتغل">07 — HOW IT WORKS</span>
+      </div>
+      <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone max-w-[18ch]"
+          data-en="From committee meeting to delivery day." data-ar="من اجتماع اللجنة لحد يوم التسليم.">
+        From committee meeting to delivery day.
+      </h2>
+    </div>
+
+    <div class="border-t border-bone/12" data-stagger="110">
+
+      <div class="step group grid md:grid-cols-12 gap-6 md:gap-10 items-baseline py-9 border-b border-bone/12" data-reveal>
+        <div class="step__num md:col-span-2 font-serif text-5xl text-bone/25">01</div>
+        <h3 class="md:col-span-4 font-serif text-2xl sm:text-3xl text-bone"
+            data-en="Brief &amp; budget" data-ar="البريف والميزانية">Brief &amp; budget</h3>
+        <p class="md:col-span-6 text-[14px] leading-[1.85] text-bone/60"
+           data-en="We meet the class committee, agree the pieces, the head-count band and a price per student that actually clears the vote."
+           data-ar="بنقابل لجنة الدفعة، نتفق على القطع وعدد الأفراد وسعر للفرد يعدي التصويت فعلًا.">
+          We meet the class committee, agree the pieces, the head-count band and a price per student that actually clears the vote.
+        </p>
+      </div>
+
+      <div class="step group grid md:grid-cols-12 gap-6 md:gap-10 items-baseline py-9 border-b border-bone/12" data-reveal>
+        <div class="step__num md:col-span-2 font-serif text-5xl text-bone/25">02</div>
+        <h3 class="md:col-span-4 font-serif text-2xl sm:text-3xl text-bone"
+            data-en="Design &amp; mockups" data-ar="التصميم والموك اب">Design &amp; mockups</h3>
+        <p class="md:col-span-6 text-[14px] leading-[1.85] text-bone/60"
+           data-en="Your faculty crest, year and colourway rendered on the real silhouette — front, back and sleeve — until the committee signs off."
+           data-ar="شعار كليتك والسنة والألوان على القصة الحقيقية — قدام وورا والكم — لحد ما اللجنة توافق.">
+          Your faculty crest, year and colourway rendered on the real silhouette — front, back and sleeve — until the committee signs off.
+        </p>
+      </div>
+
+      <div class="step group grid md:grid-cols-12 gap-6 md:gap-10 items-baseline py-9 border-b border-bone/12" data-reveal>
+        <div class="step__num md:col-span-2 font-serif text-5xl text-bone/25">03</div>
+        <h3 class="md:col-span-4 font-serif text-2xl sm:text-3xl text-bone"
+            data-en="Sampling &amp; sizing day" data-ar="العينة ويوم المقاسات">Sampling &amp; sizing day</h3>
+        <p class="md:col-span-6 text-[14px] leading-[1.85] text-bone/60"
+           data-en="One physical sample per colourway, then a sizing table on campus so every student tries S to XXL before the order locks."
+           data-ar="عينة حقيقية لكل لون، وبعدين ترابيزة مقاسات في الجامعة علشان كل طالب يقيس من S لـ XXL قبل ما الطلب يتقفل.">
+          One physical sample per colourway, then a sizing table on campus so every student tries S to XXL before the order locks.
+        </p>
+      </div>
+
+      <div class="step group grid md:grid-cols-12 gap-6 md:gap-10 items-baseline py-9 border-b border-bone/12" data-reveal>
+        <div class="step__num md:col-span-2 font-serif text-5xl text-bone/25">04</div>
+        <h3 class="md:col-span-4 font-serif text-2xl sm:text-3xl text-bone"
+            data-en="Production &amp; handover" data-ar="الإنتاج والتسليم">Production &amp; handover</h3>
+        <p class="md:col-span-6 text-[14px] leading-[1.85] text-bone/60"
+           data-en="Cut, sewn and embroidered on our own line, bagged by name and delivered to campus in one drop — with spare sizes held back for exchanges."
+           data-ar="قص وخياطة وتطريز على خطنا، متغلف باسم كل طالب ومتسلم للجامعة دفعة واحدة — مع مقاسات احتياطي للتبديل.">
+          Cut, sewn and embroidered on our own line, bagged by name and delivered to campus in one drop — with spare sizes held back for exchanges.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     CONTACT
+     ══════════════════════════════════════════════════════════════════════ -->
+<section id="contact" class="relative mesh-wine grain py-24 sm:py-32 lg:py-40 scroll-mt-20 overflow-hidden">
+  <div class="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14 grid lg:grid-cols-12 gap-14 lg:gap-24">
+
+    <div class="lg:col-span-5" data-stagger="110">
+      <div class="flex items-center gap-4 mb-6" data-reveal>
+        <span class="w-10 h-px bg-champagne"></span>
+        <span class="text-[10px] tracking-brand text-champagne" data-en="08 — START A CLASS ORDER" data-ar="٠٨ — ابدأ طلب دفعتك">08 — START A CLASS ORDER</span>
+      </div>
+
+      <h2 class="font-serif text-[clamp(2.4rem,6vw,5rem)] leading-[0.98] text-bone" data-reveal
+          data-en="Let's build your era." data-ar="يلا نبني الحقبة بتاعتك.">
+        Let&rsquo;s build your era.
+      </h2>
+
+      <p class="mt-8 max-w-[42ch] text-[15px] leading-[1.85] text-bone/65" data-reveal
+         data-en="Tell us your university, your class size and roughly when you need the pieces in hand. We reply within 24 hours with a mockup direction and a price band."
+         data-ar="قولنا جامعتك، وعدد الدفعة، وامتى محتاج القطع تقريبًا. بنرد خلال ٢٤ ساعة باتجاه تصميم ونطاق سعر.">
+        Tell us your university, your class size and roughly when you need the pieces in hand. We reply within 24 hours with a mockup direction and a price band.
+      </p>
+
+      <div class="mt-12 space-y-5 text-[13px]" data-reveal>
+        <a href="https://instagram.com/era_seniors" target="_blank" rel="noopener"
+           class="flex items-center justify-between border-b border-bone/15 pb-4 group">
+          <span class="text-[10px] tracking-brand text-bone/45">INSTAGRAM</span>
+          <span class="text-bone group-hover:text-champagne transition-colors">@era_seniors</span>
+        </a>
+        <!-- REPLACE ME: real email -->
+        <a href="mailto:hello@eraseniors.com"
+           class="flex items-center justify-between border-b border-bone/15 pb-4 group">
+          <span class="text-[10px] tracking-brand text-bone/45">EMAIL</span>
+          <span class="text-bone group-hover:text-champagne transition-colors">hello@eraseniors.com</span>
+        </a>
+        <div class="flex items-center justify-between border-b border-bone/15 pb-4">
+          <span class="text-[10px] tracking-brand text-bone/45">RESPONSE TIME</span>
+          <span class="text-bone">Within 24 hours</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- REPLACE ME: put the studio WhatsApp number in data-whatsapp (country code, digits only) -->
+    <form id="enquiry" class="lg:col-span-7" data-whatsapp="" data-email="hello@eraseniors.com" novalidate data-stagger="80">
+      <div class="grid sm:grid-cols-2 gap-x-10 gap-y-9">
+        <div class="field" data-reveal>
+          <label for="f-name">Your name *</label>
+          <input id="f-name" name="name" type="text" placeholder="Full name" autocomplete="name" required />
+        </div>
+        <div class="field" data-reveal>
+          <label for="f-uni">University / class *</label>
+          <input id="f-uni" name="university" type="text" placeholder="e.g. Cairo University — Class of 2027" required />
+        </div>
+        <div class="field" data-reveal>
+          <label for="f-product">Product</label>
+          <select id="f-product" name="product">
+            <option value="">Select a piece</option>
+            <option>Varsity jacket — Seniors</option>
+            <option>Quarter zip — Semi / Seniors</option>
+            <option>Sweatpants</option>
+            <option>T-shirt</option>
+            <option>Full class bundle</option>
+          </select>
+        </div>
+        <div class="field" data-reveal>
+          <label for="f-qty">Class size</label>
+          <input id="f-qty" name="quantity" type="number" min="1" placeholder="e.g. 240" />
+        </div>
+        <div class="field sm:col-span-2" data-reveal>
+          <label for="f-msg">Anything else</label>
+          <textarea id="f-msg" name="message" rows="3" placeholder="Colourways, crest artwork, delivery deadline…"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" data-magnetic="0.25"
+              class="btn mt-12 w-full sm:w-auto px-12 py-5 bg-champagne text-ink text-[10px] tracking-[0.24em] uppercase"
+              style="--btn-fill:#D62128;--btn-text:#fff">
+        <span class="btn-label" data-en="Send the brief" data-ar="ابعت البريف">Send the brief</span>
+        <span class="arrow rtl-flip">&rarr;</span>
+      </button>
+
+      <p id="form-status" class="mt-6 text-xs tracking-widest uppercase text-bone/40" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════════════════ -->
+<footer class="bg-ink pt-20 pb-10">
+  <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+
+    <div class="grid md:grid-cols-12 gap-12 pb-16">
+      <div class="md:col-span-5">
+        <div class="logotype text-champagne text-5xl">ERA</div>
+        <div class="mt-2 text-[9px] tracking-brand text-champagne/60">SENIORS</div>
+        <p class="mt-7 max-w-[34ch] text-[13px] leading-[1.85] text-bone/50 font-serif italic">
+          We don&rsquo;t just make clothes. We are the architects of your historical era.
+        </p>
+      </div>
+
+      <div class="md:col-span-3">
+        <div class="text-[10px] tracking-brand text-bone/40 mb-5">SITEMAP</div>
+        <ul class="space-y-3 text-[13px] text-bone/70">
+          <li><a href="#story" class="hover:text-champagne transition-colors">Story</a></li>
+          <li><a href="#identity" class="hover:text-champagne transition-colors">Brand identity</a></li>
+          <li><a href="#banners" class="hover:text-champagne transition-colors">Banners</a></li>
+          <li><a href="#collections" class="hover:text-champagne transition-colors">Collections</a></li>
+          <li><a href="#team" class="hover:text-champagne transition-colors">Team</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-4">
+        <div class="text-[10px] tracking-brand text-bone/40 mb-5">COLLECTIONS</div>
+        <ul class="space-y-3 text-[13px] text-bone/70">
+          <li>Seniors Collection — Winter</li>
+          <li>Semi / Seniors 2027 — Quarter</li>
+          <li>Sizes S &ndash; XXL</li>
+          <li>Designed &amp; manufactured in-house</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hairline pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] tracking-brand text-bone/35">
+      <span>&copy; <span id="year">2026</span> ERA SENIORS — EST. 2026</span>
+      <span>SENIORS · WEAR · STRATEGY</span>
+      <a href="https://instagram.com/era_seniors" target="_blank" rel="noopener" class="hover:text-champagne transition-colors">@ERA_SENIORS</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     LIGHTBOX
+     ══════════════════════════════════════════════════════════════════════ -->
+<div id="lightbox" class="fixed inset-0 z-[160] bg-ink/97 backdrop-blur-xl grid place-items-center p-4 sm:p-10"
+     role="dialog" aria-modal="true" aria-hidden="true" aria-label="Design preview">
+
+  <button id="lightbox-close" class="absolute top-5 right-5 w-12 h-12 grid place-items-center text-bone/70 hover:text-champagne text-2xl transition-colors" aria-label="Close preview">&times;</button>
+
+  <button id="lightbox-prev" class="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 grid place-items-center text-bone/60 hover:text-champagne text-3xl transition-colors" aria-label="Previous design">&#8249;</button>
+  <button id="lightbox-next" class="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 grid place-items-center text-bone/60 hover:text-champagne text-3xl transition-colors" aria-label="Next design">&#8250;</button>
+
+  <figure class="max-w-[min(92vw,760px)] max-h-full flex flex-col items-center gap-5">
+    <img id="lightbox-img" src="" alt="" class="max-h-[74vh] w-auto object-contain rounded-sm shadow-2xl shadow-black" />
+    <figcaption class="text-center">
+      <div id="lightbox-tag" class="text-[9px] tracking-brand text-champagne/70 mb-2"></div>
+      <div id="lightbox-caption" class="font-serif text-xl text-bone"></div>
+      <div id="lightbox-count" class="mt-3 text-[10px] tracking-brand text-bone/35"></div>
+    </figcaption>
+  </figure>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[170] bg-champagne text-ink px-6 py-3.5 text-[10px] tracking-[0.2em] uppercase shadow-2xl">
+  <span id="toast-text"></span>
+</div>
+
+<!-- Back to top -->
+<button id="to-top" data-magnetic="0.3"
+        class="fixed bottom-6 right-6 z-[130] w-12 h-12 rounded-full border border-champagne/30 bg-ink/70 backdrop-blur grid place-items-center text-champagne hover:bg-champagne hover:text-ink transition-colors"
+        aria-label="Back to top">&uarr;</button>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
