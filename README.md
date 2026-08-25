@@ -30,8 +30,8 @@ assets/
   css/style.css             brand tokens, grain, gradients, all animation CSS
   js/app.js                 shared interaction modules, no dependencies
   img/brand/                logotype + eight business banners
-  img/designs/              19 design pieces (10 original JPEG + 9 newer WebP)
-  img/products/             13 products x card+full WebP (91 files, 6.2 MB)
+  img/designs/              18 posters, WebP card+full (36 files, 2.1 MB)
+  img/products/             15 products x card+full WebP (99 files, 6.4 MB)
   img/team/                 (empty — drop team headshots here)
 ```
 
@@ -49,8 +49,8 @@ edit it directly like any other page.
 | 02 | Story | Your Arabic copy verbatim — who we are, هدفنا, والأهم — each with an English translation |
 | 03 | Brand identity | Logo lockups, 10-colour palette, type specimen |
 | 04 | Banners | Drag-scrollable strip of all eight business banners |
-| 05 | Selected work | Filterable 19-piece design gallery with lightbox |
-| 06 | Team | Four cards (placeholders — see below) |
+| 05 | Selected work | Filterable 18-poster gallery with lightbox |
+| 06 | Team | Five co-founders |
 | 07 | Process | Your seven-stage pipeline: التخطيط → التصميم → القماش → التنفيذ → التدقيق → التغليف → النقل |
 | 08 | Contact | Enquiry form that hands off to WhatsApp or email |
 
@@ -59,11 +59,11 @@ edit it directly like any other page.
 | # | Section | What's in it |
 |---|---------|--------------|
 | — | Hero | Campaign poster, style/shot counts, catalogue marquee |
-| 01 | The range | 13 product boxes, filterable by category, multi-shot lightbox |
+| 01 | The range | 15 product boxes, filterable by category, multi-shot lightbox |
 | 02 | Colourways | Six fabric colours (click to copy) + size range + customisation |
 | 03 | Lookbook | Two full-bleed campaign shots |
 
-**The 13 products — 44 shots in total.** Click any box to page through that product's shots.
+**The 15 products — 48 shots in total.** Click any box to page through that product's shots.
 
 | # | Product | Colourway | Shots |
 |---|---------|-----------|-------|
@@ -80,6 +80,11 @@ edit it directly like any other page.
 | 11 | Heritage Tee | Navy — KSA Emblem | 2 |
 | 12 | Heritage Tee | Cream — Portrait Print | 2 |
 | 13 | ERA University Tote | Natural Canvas | 1 |
+| 14 | Heritage Cap | Emerald | 2 |
+| 15 | Heritage Cap | Cream / Emerald | 2 |
+
+Each cap carries its **detail sheet as the second shot**, so the lightbox goes
+product photo first, then the full spec page.
 
 Every unique image in the source folder is placed against a product — nothing is orphaned.
 Three shots do double duty: two also serve as lookbook images, and the tote shot also
@@ -87,65 +92,42 @@ belongs to the black quarter zip.
 
 There is **no sweatpants product** on the page. Sweatpants appear styled in many shots,
 but the source folder has no standalone sweatpants shot to build a box around — add one
-and it becomes a 14th product.
+and it becomes a 16th product.
 
 ---
 
 ## Things to fill in
 
-Search `index.html` for **`REPLACE ME`** — there are four:
+Search `index.html` for **`REPLACE ME`** — there are three:
 
-1. **Team names** (`#team`) — four cards currently read *"Your Name"*. Swap the names and roles.
-   To add photos, drop files in `assets/img/team/` and replace the monogram
-   `<span class="team-card__img …">A</span>` with:
-   ```html
-   <img src="assets/img/team/name.jpg" alt="" class="team-card__img w-full h-full object-cover">
-   ```
-
-2. **WhatsApp number** — on the `<form id="enquiry">` tag:
+1. **WhatsApp number** — on the `<form id="enquiry">` tag:
    ```html
    data-whatsapp="201234567890"   <!-- country code + number, digits only -->
    ```
    Leave it empty and the form falls back to email instead.
 
-3. **Email address** — `hello@eraseniors.com` appears in the contact list and in
+2. **Email address** — `hello@eraseniors.com` appears in the contact list and in
    `data-email` on the same form.
 
-4. **"Within 24 hours"** — a response-time promise written for you, not one you stated.
+3. **"Within 24 hours"** — a response-time promise written for you, not one you stated.
    It appears twice in the contact section. Confirm it or change it.
 
-### Selected work — what was added, and what was left out
+The team section is done: **Omar Sabry, Omar Kandil, Abdallah Gamal, Yasser Elsayed
+and Mohamed Yasser**, all listed as co-founders, shown as initial monograms. Drop
+headshots into `assets/img/team/` and swap the `<span class="team-card__img …">`
+for an `<img class="team-card__img w-full h-full object-cover">` when you have them.
 
-The gallery went from 10 pieces to **19**, with a new **Heritage** filter beside
-All / Seniors / Semi 2027 / Campaign.
+### Selected work
 
-Source was `Desktop/jacket` — 102 image files. 59 were exact duplicates of each other
-and were dropped automatically. Of the 43 that remained, **9 are genuine poster or
-graphic-design work** and went in:
+All 18 posters come from `WhatsApp Unknown 2026-08-24 at 11.29.10 AM`. That folder held
+21 files: 2 were byte-identical duplicates, and one more pair was pixel-identical after a
+re-encode (caught with a perceptual hash, not a checksum), leaving 18 unique posters.
 
-| Added | Category |
-|---|---|
-| ERA Brings Something New (full-page ad) | Campaign |
-| Order Yours Before You Regret It (flat-lay ad) | Campaign |
-| ERA Seniors logotype lockup | Campaign |
-| Saudi Arabia 1932 — 2026 key graphic | Heritage |
-| Heritage print layout | Heritage |
-| Saudi Arabia patterned tee graphic | Heritage |
-| السعودية wave tee graphic | Heritage |
-| Heritage portrait artwork | Heritage |
-| Seniors hoodie front & back design | Seniors |
+Filters and counts: All 18 · Seniors 7 · Semi / 2027 5 · Campaign 10 · Heritage 2.
+Several posters sit in two categories at once.
 
-The other 34 were deliberately left out, because Selected Work is a *design* gallery:
-
-- **9** on-model / product shots — those belong on `products.html`, and most are already there
-- **4** plain garment mockups on white or black — no design content
-- **14** reference and inspiration images from other brands (ASSERTIVE UNIFY, Gamma 1874 and various tees) — not ERA work, and not yours to publish
-- **6** personal photographs of people (gym, street, group shots)
-- **1** composite that was just two of the selected tee graphics side by side
-
-Two of the new pieces are landscape, so they span two grid columns at 16:9 rather than
-being cropped into a 4:5 portrait tile. The nine new pieces also carry `data-full`, so the
-lightbox loads a 1600px version instead of the card.
+Each poster is exported to WebP twice — a 900px card for the grid and a 1600px `data-full`
+for the lightbox.
 
 ### About the product photography
 
@@ -172,7 +154,6 @@ It is all live on a public URL, so it is worth a read-through:
 | `100%` in-house production | Manifesto stat strip | Inferred from "طلبة وأصحاب المصانع" |
 | `02` collections live | Manifesto stat strip | Seniors + Semi/Seniors 2027 |
 | `S–XXL` size range | Manifesto stat strip | From the FUTURES poster ("SIZE XXL – S") |
-| Team roles (4 cards) | Team section | Inferred from your story |
 | Stage descriptions (7) | Process section | Stage *names* are yours; the one-liners are written copy |
 | "Within 24 hours" | Contact | Written copy |
 

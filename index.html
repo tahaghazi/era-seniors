@@ -154,13 +154,13 @@
 
   <!-- Floating poster fragments (parallax) -->
   <div class="pointer-events-none absolute inset-0 hidden md:block" aria-hidden="true">
-    <img decoding="async" width="1024" height="1280" src="assets/img/designs/seniors-cover.jpeg" alt=""
+    <img decoding="async" width="900" height="1125" src="assets/img/designs/seniors-fall-issue-card.webp" alt=""
          data-speed="-1.4"
          class="absolute left-[3%] top-[20%] w-[150px] lg:w-[195px] rotate-[-8deg] rounded-sm shadow-2xl shadow-black/60 opacity-90" />
-    <img decoding="async" width="1024" height="1280" src="assets/img/designs/new-era.jpeg" alt=""
+    <img decoding="async" width="900" height="1125" src="assets/img/designs/new-era-card.webp" alt=""
          data-speed="1.9"
          class="absolute right-[4%] top-[16%] w-[135px] lg:w-[175px] rotate-[7deg] rounded-sm shadow-2xl shadow-black/60 opacity-90" />
-    <img decoding="async" width="1024" height="1280" src="assets/img/designs/quarter.jpeg" alt=""
+    <img decoding="async" width="900" height="1125" src="assets/img/designs/quarter-new-season-card.webp" alt=""
          data-speed="-2.4"
          class="absolute right-[9%] bottom-[12%] w-[120px] lg:w-[155px] rotate-[-5deg] rounded-sm shadow-2xl shadow-black/60 opacity-80" />
   </div>
@@ -692,275 +692,266 @@
 
       <!-- Filters -->
       <div class="flex flex-wrap gap-2" data-reveal>
-        <button class="filter-btn active px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase"
-                data-filter="all" aria-pressed="true">All</button>
-        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase"
-                data-filter="seniors" aria-pressed="false">Seniors</button>
-        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase"
-                data-filter="semi" aria-pressed="false">Semi / 2027</button>
-        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase"
-                data-filter="campaign" aria-pressed="false">Campaign</button>
-        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase"
-                data-filter="heritage" aria-pressed="false">Heritage</button>
+        <button class="filter-btn active px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="all" aria-pressed="true">All <span class="opacity-40 ml-1">18</span></button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="seniors" aria-pressed="false">Seniors <span class="opacity-40 ml-1">07</span></button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="semi" aria-pressed="false">Semi / 2027 <span class="opacity-40 ml-1">05</span></button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="campaign" aria-pressed="false">Campaign <span class="opacity-40 ml-1">10</span></button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="heritage" aria-pressed="false">Heritage <span class="opacity-40 ml-1">02</span></button>
       </div>
     </div>
 
     <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-stagger="90">
-
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Futures — Winter Varsity" data-reveal="scale"
-               data-cat="seniors campaign" data-title="Futures — Winter Varsity" data-tag="Seniors Collection · Winter" data-cursor="Open">
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: New Collection — Coming Soon" data-reveal="scale"
+               data-cat="seniors campaign" data-title="New Collection — Coming Soon" data-tag="Seniors · Teaser" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img decoding="async" width="1024" height="1280" src="assets/img/designs/futures.jpeg" alt="FUTURES campaign poster — navy and cream ERA varsity jackets" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="tile__overlay absolute inset-0"></div>
-        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · WINTER</div>
-          <div class="font-serif text-2xl text-bone">Futures</div>
-        </div>
-        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">01</div>
-      </article>
-
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: New Collection — Coming Soon" data-reveal="scale"
-               data-cat="seniors" data-title="New Collection — Coming Soon" data-tag="Seniors Collection · Teaser" data-cursor="Open">
-        <div class="tile__media aspect-[4/5]">
-          <img decoding="async" width="1024" height="1280" src="assets/img/designs/new-collection.jpeg" alt="New collection coming soon teaser — ERA varsity jacket" class="w-full h-full object-cover" loading="lazy" />
+          <img src="assets/img/designs/new-collection-teaser-card.webp" data-full="assets/img/designs/new-collection-teaser-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="New collection teaser poster with the navy ERA varsity jacket" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · TEASER</div>
           <div class="font-serif text-2xl text-bone">New Collection</div>
         </div>
-        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">02</div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">01</div>
       </article>
-
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Seniors — Fall Issue" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: Seniors — Fall Issue" data-reveal="scale"
                data-cat="campaign" data-title="Seniors — Fall Issue" data-tag="Campaign · Editorial cover" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img decoding="async" width="1024" height="1280" src="assets/img/designs/seniors-cover.jpeg" alt="SENIORS fall issue magazine-style cover in red and cyan" class="w-full h-full object-cover" loading="lazy" />
+          <img src="assets/img/designs/seniors-fall-issue-card.webp" data-full="assets/img/designs/seniors-fall-issue-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="SENIORS magazine-style fall issue cover in red and cyan" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div class="text-[9px] tracking-brand text-champagne mb-2">CAMPAIGN · COVER</div>
           <div class="font-serif text-2xl text-bone">Fall Issue</div>
         </div>
-        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">03</div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">02</div>
       </article>
-
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Seniors Collection — Key Visual" data-reveal="scale"
-               data-cat="seniors" data-title="Seniors Collection — Key Visual" data-tag="Seniors Collection · Key visual" data-cursor="Open">
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: Futures — Winter Varsity" data-reveal="scale"
+               data-cat="seniors" data-title="Futures — Winter Varsity" data-tag="Seniors · Winter" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img decoding="async" width="1024" height="1280" src="assets/img/designs/seniors-collection.jpeg" alt="Seniors Collection key visual on warm taupe backdrop" class="w-full h-full object-cover" loading="lazy" />
+          <img src="assets/img/designs/futures-winter-card.webp" data-full="assets/img/designs/futures-winter-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="FUTURES winter poster with navy and cream varsity jackets" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · KEY VISUAL</div>
-          <div class="font-serif text-2xl text-bone">Seniors Collection</div>
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · WINTER</div>
+          <div class="font-serif text-2xl text-bone">Futures</div>
         </div>
-        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">04</div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">03</div>
       </article>
-
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Do More Of What You Love" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: Do More Of What You Love" data-reveal="scale"
                data-cat="campaign" data-title="Do More Of What You Love" data-tag="Campaign · Daily motivation" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img decoding="async" width="1024" height="1280" src="assets/img/designs/do-more.jpeg" alt="Do more of what you love — red typographic campaign poster" class="w-full h-full object-cover" loading="lazy" />
+          <img src="assets/img/designs/do-more-card.webp" data-full="assets/img/designs/do-more-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="Do More Of What You Love typographic poster in red" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div class="text-[9px] tracking-brand text-champagne mb-2">CAMPAIGN · SOCIAL</div>
           <div class="font-serif text-2xl text-bone">Do More</div>
         </div>
-        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">05</div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">04</div>
       </article>
-
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Semi Seniors — NEW" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: Semi Seniors — NEW" data-reveal="scale"
                data-cat="semi" data-title="Semi Seniors — NEW" data-tag="Semi / Seniors 2027 · Drop" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img decoding="async" width="1024" height="1280" src="assets/img/designs/new-quarterzip.jpeg" alt="ERA Semi Seniors quarter-zip with hand-drawn NEW lettering" class="w-full h-full object-cover" loading="lazy" />
+          <img src="assets/img/designs/semi-new-quarterzip-card.webp" data-full="assets/img/designs/semi-new-quarterzip-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="Hand-drawn NEW lettering over the black ERA quarter zip" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div class="text-[9px] tracking-brand text-champagne mb-2">SEMI · DROP</div>
           <div class="font-serif text-2xl text-bone">New Quarter Zip</div>
         </div>
-        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">06</div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">05</div>
       </article>
-
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Limited Pieces. Sharp Tailoring." data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: Limited Pieces. Sharp Tailoring." data-reveal="scale"
                data-cat="semi campaign" data-title="Limited Pieces. Sharp Tailoring." data-tag="Semi / Seniors 2027 · Editorial" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img decoding="async" width="1024" height="1280" src="assets/img/designs/limited-pieces.jpeg" alt="Editorial layout with numbered notes over a maroon and black quarter-zip" class="w-full h-full object-cover" loading="lazy" />
+          <img src="assets/img/designs/limited-pieces-card.webp" data-full="assets/img/designs/limited-pieces-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="Numbered editorial layout over a maroon and black quarter zip" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div class="text-[9px] tracking-brand text-champagne mb-2">SEMI · EDITORIAL</div>
           <div class="font-serif text-2xl text-bone">Limited Pieces</div>
         </div>
-        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">07</div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">06</div>
       </article>
-
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: New Era — Casual Seniors Wear" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: New Era — Casual Seniors Wear" data-reveal="scale"
                data-cat="semi" data-title="New Era — Casual Seniors Wear" data-tag="Semi / Seniors 2027 · Poster" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img decoding="async" width="1024" height="1280" src="assets/img/designs/new-era.jpeg" alt="NEW ERA poster in red and marigold with maroon quarter-zip" class="w-full h-full object-cover" loading="lazy" />
+          <img src="assets/img/designs/new-era-card.webp" data-full="assets/img/designs/new-era-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="NEW ERA poster in red and marigold with a maroon quarter zip" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div class="text-[9px] tracking-brand text-champagne mb-2">SEMI · POSTER</div>
           <div class="font-serif text-2xl text-bone">New Era</div>
         </div>
-        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">08</div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">07</div>
       </article>
-
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Semi / Senior 2027 — Lookbook" data-reveal="scale"
-               data-cat="semi" data-title="Semi / Senior 2027 — Lookbook" data-tag="Semi / Seniors 2027 · Lookbook" data-cursor="Open">
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: Seniors Collection — Key Visual" data-reveal="scale"
+               data-cat="seniors" data-title="Seniors Collection — Key Visual" data-tag="Seniors · Key visual" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img decoding="async" width="1024" height="1280" src="assets/img/designs/browser-stack.jpeg" alt="Stacked browser-window lookbook layout on a red court backdrop" class="w-full h-full object-cover" loading="lazy" />
+          <img src="assets/img/designs/seniors-collection-card.webp" data-full="assets/img/designs/seniors-collection-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="Seniors Collection key visual on a warm taupe backdrop" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">SEMI · LOOKBOOK</div>
-          <div class="font-serif text-2xl text-bone">Window Stack</div>
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · KEY VISUAL</div>
+          <div class="font-serif text-2xl text-bone">Seniors Collection</div>
         </div>
-        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">09</div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">08</div>
       </article>
-
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Quarter — This Is The New Season" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: Quarter — This Is The New Season" data-reveal="scale"
                data-cat="semi campaign" data-title="Quarter — This Is The New Season" data-tag="Semi / Seniors 2027 · Campaign" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img decoding="async" width="1024" height="1280" src="assets/img/designs/quarter.jpeg" alt="QUARTER campaign layout over a maroon quarter-zip in an interior scene" class="w-full h-full object-cover" loading="lazy" />
+          <img src="assets/img/designs/quarter-new-season-card.webp" data-full="assets/img/designs/quarter-new-season-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="QUARTER campaign layout over a maroon quarter zip" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div class="text-[9px] tracking-brand text-champagne mb-2">SEMI · CAMPAIGN</div>
           <div class="font-serif text-2xl text-bone">Quarter</div>
         </div>
-        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">10</div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">09</div>
       </article>
       <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
-               aria-label="Open preview: ERA Brings Something New" data-reveal="scale"
-               data-cat="campaign" data-title="ERA Brings Something New" data-tag="Campaign · Full-page ad" data-cursor="Open">
+               aria-label="Open preview: Semi / Senior 2027 — Lookbook" data-reveal="scale"
+               data-cat="semi" data-title="Semi / Senior 2027 — Lookbook" data-tag="Semi / Seniors 2027 · Lookbook" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/campaign-something-new-card.webp" data-full="assets/img/designs/campaign-something-new-full.webp" width="900" height="1350" loading="lazy" decoding="async"
-               alt="ERA Brings Something New — full-page campaign advert for the maroon coach jacket" class="w-full h-full object-cover" />
+          <img src="assets/img/designs/window-stack-card.webp" data-full="assets/img/designs/window-stack-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="Stacked browser-window lookbook on a red court backdrop" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">CAMPAIGN · AD</div>
-          <div class="font-serif text-2xl text-bone">Something New</div>
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SEMI · LOOKBOOK</div>
+          <div class="font-serif text-2xl text-bone">Window Stack</div>
+        </div>
+        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">10</div>
+      </article>
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: FW'29 — Portrait Tee" data-reveal="scale"
+               data-cat="heritage campaign" data-title="FW'29 — Portrait Tee" data-tag="Heritage · Campaign" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/fw29-portrait-card.webp" data-full="assets/img/designs/fw29-portrait-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="Portrait print tee shot on location with vertical red type" class="w-full h-full object-cover" />
+        </div>
+        <div class="tile__overlay absolute inset-0"></div>
+        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="text-[9px] tracking-brand text-champagne mb-2">HERITAGE · CAMPAIGN</div>
+          <div class="font-serif text-2xl text-bone">FW'29</div>
         </div>
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">11</div>
       </article>
       <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
-               aria-label="Open preview: Order Yours Before You Regret It" data-reveal="scale"
-               data-cat="campaign" data-title="Order Yours Before You Regret It" data-tag="Campaign · Flat-lay ad" data-cursor="Open">
+               aria-label="Open preview: Heritage Tee — Navy, New Collection" data-reveal="scale"
+               data-cat="heritage" data-title="Heritage Tee — Navy, New Collection" data-tag="Heritage · New collection" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/campaign-no-regret-card.webp" data-full="assets/img/designs/campaign-no-regret-full.webp" width="900" height="1125" loading="lazy" decoding="async"
-               alt="ERA Senior Collection flat-lay advert for the maroon varsity jacket" class="w-full h-full object-cover" />
+          <img src="assets/img/designs/heritage-navy-tee-card.webp" data-full="assets/img/designs/heritage-navy-tee-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="Two navy emblem tee shots in a city setting" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">CAMPAIGN · FLAT LAY</div>
-          <div class="font-serif text-2xl text-bone">Order Yours</div>
+          <div class="text-[9px] tracking-brand text-champagne mb-2">HERITAGE · NEW COLLECTION</div>
+          <div class="font-serif text-2xl text-bone">Navy Emblem</div>
         </div>
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">12</div>
       </article>
       <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
-               aria-label="Open preview: ERA Seniors Logotype" data-reveal="scale"
-               data-cat="campaign" data-title="ERA Seniors Logotype" data-tag="Brand · Logotype lockup" data-cursor="Open">
+               aria-label="Open preview: Seniors 2027 — New Collection" data-reveal="scale"
+               data-cat="seniors campaign" data-title="Seniors 2027 — New Collection" data-tag="Seniors · New collection" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/brand-logotype-poster-card.webp" data-full="assets/img/designs/brand-logotype-poster-full.webp" width="900" height="1200" loading="lazy" decoding="async"
-               alt="ERA SENIORS logotype lockup in champagne on deep maroon" class="w-full h-full object-cover" />
+          <img src="assets/img/designs/seniors-2027-varsity-card.webp" data-full="assets/img/designs/seniors-2027-varsity-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="Maroon varsity jacket against a large red numeral two" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">BRAND · LOGOTYPE</div>
-          <div class="font-serif text-2xl text-bone">Logotype</div>
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · NEW COLLECTION</div>
+          <div class="font-serif text-2xl text-bone">Seniors 2027</div>
         </div>
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">13</div>
       </article>
-      <article class="tile tile--wide group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
-               aria-label="Open preview: Saudi Arabia 1932 — 2026" data-reveal="scale"
-               data-cat="heritage" data-title="Saudi Arabia 1932 — 2026" data-tag="Heritage · Key graphic" data-cursor="Open">
-        <div class="tile__media aspect-[16/9]">
-          <img src="assets/img/designs/heritage-key-graphic-card.webp" data-full="assets/img/designs/heritage-key-graphic-full.webp" width="900" height="491" loading="lazy" decoding="async"
-               alt="Saudi Arabia 1932 to 2026 key graphic in green and white" class="w-full h-full object-cover" />
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: Seniors Hoodies — Street & Stitch" data-reveal="scale"
+               data-cat="seniors" data-title="Seniors Hoodies — Street & Stitch" data-tag="Seniors · Hoodie drop" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/seniors-hoodies-card.webp" data-full="assets/img/designs/seniors-hoodies-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="SENIORS HOODIES poster with the maroon pullover hoodie" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">HERITAGE · KEY GRAPHIC</div>
-          <div class="font-serif text-2xl text-bone">1932 — 2026</div>
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · HOODIES</div>
+          <div class="font-serif text-2xl text-bone">Seniors Hoodies</div>
         </div>
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">14</div>
       </article>
-      <article class="tile tile--wide group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
-               aria-label="Open preview: Heritage Print Layout" data-reveal="scale"
-               data-cat="heritage" data-title="Heritage Print Layout" data-tag="Heritage · Garment print" data-cursor="Open">
-        <div class="tile__media aspect-[16/9]">
-          <img src="assets/img/designs/heritage-print-layout-card.webp" data-full="assets/img/designs/heritage-print-layout-full.webp" width="900" height="491" loading="lazy" decoding="async"
-               alt="Heritage garment print layout on a cream tee" class="w-full h-full object-cover" />
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
+               aria-label="Open preview: Seniors / 2027 — Texture Grid" data-reveal="scale"
+               data-cat="seniors" data-title="Seniors / 2027 — Texture Grid" data-tag="Seniors · Composition" data-cursor="Open">
+        <div class="tile__media aspect-[4/5]">
+          <img src="assets/img/designs/seniors-2027-grid-card.webp" data-full="assets/img/designs/seniors-2027-grid-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="Four-panel hoodie grid with the SENIORS star back print" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">HERITAGE · PRINT</div>
-          <div class="font-serif text-2xl text-bone">Print Layout</div>
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · GRID</div>
+          <div class="font-serif text-2xl text-bone">Soft & Structured</div>
         </div>
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">15</div>
       </article>
       <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
-               aria-label="Open preview: Saudi Arabia — Patterned Tee" data-reveal="scale"
-               data-cat="heritage" data-title="Saudi Arabia — Patterned Tee" data-tag="Heritage · Tee graphic" data-cursor="Open">
+               aria-label="Open preview: Make — 2027 Collection" data-reveal="scale"
+               data-cat="seniors campaign" data-title="Make — 2027 Collection" data-tag="Seniors · Campaign" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/heritage-tee-pattern-card.webp" data-full="assets/img/designs/heritage-tee-pattern-full.webp" width="900" height="987" loading="lazy" decoding="async"
-               alt="SAUDI ARABIA patterned tee graphic in green and cream" class="w-full h-full object-cover" />
+          <img src="assets/img/designs/make-2027-card.webp" data-full="assets/img/designs/make-2027-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="MAKE campaign poster with a pair in maroon varsity jackets" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">HERITAGE · TEE</div>
-          <div class="font-serif text-2xl text-bone">Saudi Arabia</div>
+          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · CAMPAIGN</div>
+          <div class="font-serif text-2xl text-bone">Make</div>
         </div>
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">16</div>
       </article>
       <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
-               aria-label="Open preview: السعودية — Wave Tee" data-reveal="scale"
-               data-cat="heritage" data-title="السعودية — Wave Tee" data-tag="Heritage · Tee graphic" data-cursor="Open">
+               aria-label="Open preview: Modern Baseball Look" data-reveal="scale"
+               data-cat="campaign" data-title="Modern Baseball Look" data-tag="Campaign · Styling sheet" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/heritage-tee-wave-card.webp" data-full="assets/img/designs/heritage-tee-wave-full.webp" width="900" height="988" loading="lazy" decoding="async"
-               alt="Al-Saudia wave tee graphic in green and cream" class="w-full h-full object-cover" />
+          <img src="assets/img/designs/modern-baseball-look-card.webp" data-full="assets/img/designs/modern-baseball-look-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="Modern Baseball Look styling sheet on green fabric" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">HERITAGE · TEE</div>
-          <div class="font-serif text-2xl text-bone">Al-Saudia</div>
+          <div class="text-[9px] tracking-brand text-champagne mb-2">CAMPAIGN · STYLING</div>
+          <div class="font-serif text-2xl text-bone">Modern Baseball</div>
         </div>
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">17</div>
       </article>
       <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
-               aria-label="Open preview: Heritage Portrait Artwork" data-reveal="scale"
-               data-cat="heritage" data-title="Heritage Portrait Artwork" data-tag="Heritage · Illustration" data-cursor="Open">
+               aria-label="Open preview: New Collection 2027 — Own Your Style" data-reveal="scale"
+               data-cat="campaign" data-title="New Collection 2027 — Own Your Style" data-tag="Campaign · Announcement" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/heritage-portrait-art-card.webp" data-full="assets/img/designs/heritage-portrait-art-full.webp" width="900" height="1125" loading="lazy" decoding="async"
-               alt="Heritage portrait illustration in green, cream and red" class="w-full h-full object-cover" />
+          <img src="assets/img/designs/new-collection-2027-card.webp" data-full="assets/img/designs/new-collection-2027-full.webp" width="900" height="1125" loading="lazy" decoding="async"
+               alt="Black and white New Collection 2027 announcement poster" class="w-full h-full object-cover" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">HERITAGE · ARTWORK</div>
-          <div class="font-serif text-2xl text-bone">Portrait</div>
+          <div class="text-[9px] tracking-brand text-champagne mb-2">CAMPAIGN · ANNOUNCEMENT</div>
+          <div class="font-serif text-2xl text-bone">New Collection 2027</div>
         </div>
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">18</div>
-      </article>
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button"
-               aria-label="Open preview: Seniors Hoodie — Front & Back" data-reveal="scale"
-               data-cat="seniors" data-title="Seniors Hoodie — Front & Back" data-tag="Seniors · Garment design" data-cursor="Open">
-        <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/seniors-hoodie-design-card.webp" data-full="assets/img/designs/seniors-hoodie-design-full.webp" width="675" height="1200" loading="lazy" decoding="async"
-               alt="Seniors hoodie garment design, front and back with star wordmark" class="w-full h-full object-cover" />
-        </div>
-        <div class="tile__overlay absolute inset-0"></div>
-        <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div class="text-[9px] tracking-brand text-champagne mb-2">SENIORS · GARMENT</div>
-          <div class="font-serif text-2xl text-bone">Seniors Hoodie</div>
-        </div>
-        <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5 tile__idx">19</div>
       </article>
     </div>
   </div>
@@ -993,75 +984,76 @@
         </h2>
       </div>
       <p class="max-w-[36ch] text-[13px] leading-[1.85] text-bone/55" data-reveal
-         data-en="Four people between the group chat and the cutting table. One of us is always the one you actually talk to."
-         data-ar="أربع أفراد بين جروب الدفعة وترابيزة القص. دايمًا في حد منهم هو اللي بتتكلم معاه فعلًا.">
-        Four people between the group chat and the cutting table. One of us is always the one you actually talk to.
+         data-en="Five co-founders between the group chat and the cutting table. One of us is always the one you actually talk to."
+         data-ar="خمس شركاء مؤسسين بين جروب الدفعة وترابيزة القص. دايمًا في حد منهم هو اللي بتتكلم معاه فعلًا.">
+        Five co-founders between the group chat and the cutting table. One of us is always the one you actually talk to.
       </p>
     </div>
 
-    <!--
-      ┌─────────────────────────────────────────────────────────────────┐
-      │ REPLACE ME: swap "Your Name" for the real names, and drop head- │
-      │ shots into assets/img/team/ then replace the monogram <div>     │
-      │ with <img src="assets/img/team/name.jpg" class="team-card__img  │
-      │ w-full h-full object-cover">                                     │
-      └─────────────────────────────────────────────────────────────────┘
-    -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" data-stagger="110">
-
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5" data-stagger="110">
       <article class="team-card group" data-reveal="scale">
         <div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-wine grid place-items-center">
-          <span class="team-card__img logotype text-[110px] text-champagne/85 select-none">A</span>
+          <span class="team-card__img logotype text-[64px] sm:text-[76px] text-champagne/85 select-none tracking-[0.06em]">OS</span>
           <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
           <div class="absolute bottom-4 left-4 text-[9px] tracking-brand text-champagne/80">CO-FOUNDER</div>
         </div>
         <div class="pt-5">
           <div class="team-card__rule h-px bg-champagne mb-4"></div>
-          <h3 class="font-serif text-2xl text-bone">Your Name</h3>
-          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45">Creative direction &amp; brand</p>
-          <p class="mt-4 text-[13px] leading-[1.8] text-bone/55">Owns the logotype, the palette and every campaign that goes out under it.</p>
+          <h3 class="font-serif text-2xl text-bone">Omar Sabry</h3>
+          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45"
+             data-en="Co-founder" data-ar="شريك مؤسس">Co-founder</p>
         </div>
       </article>
-
       <article class="team-card group" data-reveal="scale">
         <div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-maroon grid place-items-center">
-          <span class="team-card__img logotype text-[110px] text-champagne/85 select-none">B</span>
+          <span class="team-card__img logotype text-[64px] sm:text-[76px] text-champagne/85 select-none tracking-[0.06em]">OK</span>
           <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
           <div class="absolute bottom-4 left-4 text-[9px] tracking-brand text-champagne/80">CO-FOUNDER</div>
         </div>
         <div class="pt-5">
           <div class="team-card__rule h-px bg-champagne mb-4"></div>
-          <h3 class="font-serif text-2xl text-bone">Your Name</h3>
-          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45">Production &amp; manufacturing</p>
-          <p class="mt-4 text-[13px] leading-[1.8] text-bone/55">Runs the line. Fabric sourcing, sampling, quality control and delivery dates.</p>
+          <h3 class="font-serif text-2xl text-bone">Omar Kandil</h3>
+          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45"
+             data-en="Co-founder" data-ar="شريك مؤسس">Co-founder</p>
         </div>
       </article>
-
       <article class="team-card group" data-reveal="scale">
         <div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-navy grid place-items-center">
-          <span class="team-card__img logotype text-[110px] text-champagne/85 select-none">C</span>
+          <span class="team-card__img logotype text-[64px] sm:text-[76px] text-champagne/85 select-none tracking-[0.06em]">AG</span>
           <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
-          <div class="absolute bottom-4 left-4 text-[9px] tracking-brand text-champagne/80">PARTNER</div>
+          <div class="absolute bottom-4 left-4 text-[9px] tracking-brand text-champagne/80">CO-FOUNDER</div>
         </div>
         <div class="pt-5">
           <div class="team-card__rule h-px bg-champagne mb-4"></div>
-          <h3 class="font-serif text-2xl text-bone">Your Name</h3>
-          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45">Campus partnerships</p>
-          <p class="mt-4 text-[13px] leading-[1.8] text-bone/55">Works with class committees — briefs, sizing days and on-campus fittings.</p>
+          <h3 class="font-serif text-2xl text-bone">Abdallah Gamal</h3>
+          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45"
+             data-en="Co-founder" data-ar="شريك مؤسس">Co-founder</p>
         </div>
       </article>
-
       <article class="team-card group" data-reveal="scale">
-        <div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-mocha grid place-items-center">
-          <span class="team-card__img logotype text-[110px] text-wine/70 select-none">D</span>
+        <div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-burgundy grid place-items-center">
+          <span class="team-card__img logotype text-[64px] sm:text-[76px] text-champagne/85 select-none tracking-[0.06em]">YE</span>
           <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
-          <div class="absolute bottom-4 left-4 text-[9px] tracking-brand text-champagne/80">PARTNER</div>
+          <div class="absolute bottom-4 left-4 text-[9px] tracking-brand text-champagne/80">CO-FOUNDER</div>
         </div>
         <div class="pt-5">
           <div class="team-card__rule h-px bg-champagne mb-4"></div>
-          <h3 class="font-serif text-2xl text-bone">Your Name</h3>
-          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45">Operations &amp; fulfilment</p>
-          <p class="mt-4 text-[13px] leading-[1.8] text-bone/55">Order tracking, size exchanges and getting every box to the right hand.</p>
+          <h3 class="font-serif text-2xl text-bone">Yasser Elsayed</h3>
+          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45"
+             data-en="Co-founder" data-ar="شريك مؤسس">Co-founder</p>
+        </div>
+      </article>
+      <article class="team-card group" data-reveal="scale">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-mocha grid place-items-center">
+          <span class="team-card__img logotype text-[64px] sm:text-[76px] text-champagne/85 select-none tracking-[0.06em]">MY</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-[9px] tracking-brand text-champagne/80">CO-FOUNDER</div>
+        </div>
+        <div class="pt-5">
+          <div class="team-card__rule h-px bg-champagne mb-4"></div>
+          <h3 class="font-serif text-2xl text-bone">Mohamed Yasser</h3>
+          <p class="mt-2 text-[11px] tracking-[0.16em] uppercase text-bone/45"
+             data-en="Co-founder" data-ar="شريك مؤسس">Co-founder</p>
         </div>
       </article>
     </div>
