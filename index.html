@@ -283,6 +283,15 @@
      STORY
      ══════════════════════════════════════════════════════════════════════ -->
 <section id="story" class="relative mesh-ember grain py-24 sm:py-32 lg:py-44 overflow-hidden scroll-mt-20">
+
+  <!-- Chapter rail — fills as the story is read -->
+  <div class="hidden xl:block absolute left-7 top-40 bottom-40 w-px bg-bone/12 z-10" aria-hidden="true">
+    <div id="story-fill" class="story-rail__fill absolute top-0 left-0 w-full bg-gradient-to-b from-champagne via-burgundy to-ember" style="height:0%"></div>
+    <span class="story-dot" data-at="3"  style="top:3%"></span>
+    <span class="story-dot" data-at="60" style="top:60%"></span>
+    <span class="story-dot" data-at="84" style="top:84%"></span>
+  </div>
+
   <div class="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
 
     <div class="flex items-center gap-4 mb-14" data-reveal>
@@ -290,22 +299,31 @@
       <span class="text-[10px] tracking-brand text-champagne" data-en="02 — WHO WE ARE" data-ar="٠٢ — احنا مين">02 — WHO WE ARE</span>
     </div>
 
+    <!-- ─────────────── CHAPTER 01 ─────────────── -->
     <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
 
       <div class="lg:col-span-6" data-stagger="130">
-        <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone" data-reveal
+
+        <div class="chapter-label text-champagne/70 mb-7" data-reveal>
+          <span class="text-[10px] tracking-brand">CHAPTER 01 / 03</span>
+          <span class="chapter-label__line"></span>
+          <span class="font-ar text-[13px]" dir="rtl">احنا مين وقصتنا</span>
+        </div>
+
+        <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone" data-reveal="clip"
             data-en="Students who understand the class. Makers who can build it."
             data-ar="طلبة فاهمين الدفعة. ومصنّعين قادرين ينفذوا.">
           Students who understand the class. Makers who can build it.
         </h2>
 
-        <!-- Original Arabic copy from the brand deck -->
-        <div class="mt-10 border-l-2 border-ember/60 pl-6" data-reveal>
-          <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" dir="rtl">
+        <!-- Verbatim Arabic from the brand deck — illuminates word by word on scroll -->
+        <div class="mt-10 relative pl-6" data-reveal>
+          <span class="quote-rail absolute left-0 top-0 bottom-0 w-[2px] bg-ember/60 origin-top"></span>
+          <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" dir="rtl" data-scroll-words>
             إحنا فريق من الطلبة وأصحاب المصانع، جمعنا بين فهمنا للدفعات واحتياجاتها،
             وبين خبرة التصنيع والتنفيذ؛ علشان نقدم تجربة متكاملة للدفعة، مش مجرد قطعة ملابس.
           </p>
-          <p class="mt-5 text-[13px] leading-[1.9] text-bone/50 italic">
+          <p class="words-soft mt-5 text-[13px] leading-[1.9] italic" data-scroll-words>
             &ldquo;We are a team of students and factory owners. We combined our understanding of
             graduating classes and what they need with real manufacturing and execution experience —
             so we can deliver a complete experience for the class, not just a garment.&rdquo;
@@ -313,7 +331,7 @@
         </div>
 
         <div class="mt-12 grid sm:grid-cols-2 gap-8" data-stagger="100">
-          <div data-reveal>
+          <div data-reveal="left">
             <div class="text-[10px] tracking-brand text-ember mb-3" data-en="THE STUDENT SIDE" data-ar="جانب الطلبة">THE STUDENT SIDE</div>
             <p class="text-[14px] leading-[1.85] text-bone/65"
                data-en="We sit where you sit. We know the committee votes, the budget arguments, the group chat at 2am, and the deadline that is always sooner than it looks."
@@ -321,7 +339,7 @@
               We sit where you sit. We know the committee votes, the budget arguments, the group chat at 2am, and the deadline that is always sooner than it looks.
             </p>
           </div>
-          <div data-reveal>
+          <div data-reveal="right">
             <div class="text-[10px] tracking-brand text-gold mb-3" data-en="THE FACTORY SIDE" data-ar="جانب المصنع">THE FACTORY SIDE</div>
             <p class="text-[14px] leading-[1.85] text-bone/65"
                data-en="Our partners own the production line. That means honest lead times, controlled fabric quality, and a price that has no middleman folded into it."
@@ -332,51 +350,60 @@
         </div>
       </div>
 
-      <div class="lg:col-span-6 grid grid-cols-2 gap-4 sm:gap-6" data-stagger="140">
-        <img src="assets/img/brand/banner-story.jpeg" data-reveal="scale"
+      <!-- Banner column — each panel wipes open, then drifts at its own rate -->
+      <div class="lg:col-span-6 grid grid-cols-2 gap-4 sm:gap-6" data-stagger="160">
+        <img src="assets/img/brand/banner-story.jpeg" data-reveal="clip" data-speed="-1.1"
              alt="ERA Seniors brand banner — who we are and our story, in Arabic"
              class="w-full rounded-sm shadow-2xl shadow-black/60" />
-        <img src="assets/img/brand/banner-about.jpeg" data-reveal="scale"
+        <img src="assets/img/brand/banner-about.jpeg" data-reveal="clip" data-speed="1.3"
              alt="ERA Seniors brand banner — what we are about, in Arabic"
              class="w-full rounded-sm shadow-2xl shadow-black/60 mt-10" />
-        <img src="assets/img/brand/banner-goal.jpeg" data-reveal="scale"
+        <img src="assets/img/brand/banner-goal.jpeg" data-reveal="clip" data-speed="-0.7"
              alt="ERA Seniors brand banner — our goal, in Arabic"
              class="w-full rounded-sm shadow-2xl shadow-black/60" />
-        <img src="assets/img/brand/banner-purpose.jpeg" data-reveal="scale"
+        <img src="assets/img/brand/banner-purpose.jpeg" data-reveal="clip" data-speed="0.9"
              alt="ERA Seniors brand banner — and most importantly, in Arabic"
              class="w-full rounded-sm shadow-2xl shadow-black/60 mt-10" />
       </div>
     </div>
 
-    <!-- Chapters: هدفنا / والأهم — verbatim brand copy with translations -->
-    <div class="mt-20 lg:mt-28 grid md:grid-cols-2 gap-px bg-bone/10 border border-bone/10" data-stagger="140">
+    <!-- ─────────────── CHAPTERS 02 & 03 ─────────────── -->
+    <div class="mt-20 lg:mt-32 grid md:grid-cols-2 gap-px bg-bone/10 border border-bone/10" data-stagger="180">
 
-      <article class="bg-ink/60 backdrop-blur-sm p-8 sm:p-12" data-reveal>
-        <div class="flex items-center justify-between mb-8">
-          <span class="text-[10px] tracking-brand text-gold" data-en="OUR GOAL" data-ar="هدفنا">OUR GOAL</span>
-          <span class="font-ar text-3xl text-gold/80" dir="rtl">هدفنا&hellip;</span>
+      <article class="chapter bg-ink/60 backdrop-blur-sm p-8 sm:p-12 relative overflow-hidden" data-reveal>
+        <span class="chapter__sweep"></span>
+        <div class="relative flex items-start justify-between gap-6 mb-9">
+          <div class="chapter-label chapter-label--stack text-gold/80">
+            <span class="text-[10px] tracking-brand">CHAPTER 02 / 03</span>
+            <span class="chapter-label__line"></span>
+          </div>
+          <span class="font-ar text-4xl sm:text-5xl text-gold/85 leading-none" dir="rtl" data-reveal="mark">هدفنا&hellip;</span>
         </div>
-        <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" dir="rtl">
+        <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" dir="rtl" data-scroll-words>
           سواء كانت سنة تخرج، احتفال، أو أي حاجة حابين تعملوها كدفعة.
           هدفنا إننا ناخد الفكرة من مجرد كلام، ونحولها لحاجة حقيقية تعيش معاك.
         </p>
-        <p class="mt-6 text-[13px] leading-[1.9] text-bone/50 italic">
+        <p class="words-soft mt-6 text-[13px] leading-[1.9] italic" data-scroll-words>
           &ldquo;Whether it&rsquo;s a graduation year, a celebration, or anything else you want to do
           together as a class — our goal is to take the idea out of the group chat and turn it into
           something real that stays with you.&rdquo;
         </p>
       </article>
 
-      <article class="bg-ink/60 backdrop-blur-sm p-8 sm:p-12" data-reveal>
-        <div class="flex items-center justify-between mb-8">
-          <span class="text-[10px] tracking-brand text-ember" data-en="AND MOST IMPORTANTLY" data-ar="والأهم">AND MOST IMPORTANTLY</span>
-          <span class="font-ar text-3xl text-ember/80" dir="rtl">والأهم&hellip;</span>
+      <article class="chapter bg-ink/60 backdrop-blur-sm p-8 sm:p-12 relative overflow-hidden" data-reveal>
+        <span class="chapter__sweep"></span>
+        <div class="relative flex items-start justify-between gap-6 mb-9">
+          <div class="chapter-label chapter-label--stack text-ember/80">
+            <span class="text-[10px] tracking-brand">CHAPTER 03 / 03</span>
+            <span class="chapter-label__line"></span>
+          </div>
+          <span class="font-ar text-4xl sm:text-5xl text-ember/90 leading-none" dir="rtl" data-reveal="mark">والأهم&hellip;</span>
         </div>
-        <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" dir="rtl">
+        <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" dir="rtl" data-scroll-words>
           ERA مش تابع لدفعة معينة، ولا معمول لناس بعينها. إحنا بنحاول نكون موجودين مع كل الدفعات،
           ونساعد كل دفعة إنها تعمل حاجتها بطريقتها، وبالتفاصيل اللي تمثلها. دي الـ ERA بتاعتنا.
         </p>
-        <p class="mt-6 text-[13px] leading-[1.9] text-bone/50 italic">
+        <p class="words-soft mt-6 text-[13px] leading-[1.9] italic" data-scroll-words>
           &ldquo;ERA doesn&rsquo;t belong to one class, and it isn&rsquo;t made for one group of people.
           We try to be there for every class — helping each one do its own thing, its own way, with the
           details that represent it. That is our ERA.&rdquo;

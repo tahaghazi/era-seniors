@@ -201,6 +201,90 @@
   }
 
   /* ------------------------------------------------------------------------
+     5b. Story motion — words illuminate as they are read, rail tracks progress
+     ------------------------------------------------------------------------ */
+  function storyMotion() {
+    var blocks = $$('[data-scroll-words]');
+    var section = $('#story');
+    var fill = $('#story-fill');
+    var dots = $$('.story-dot');
+    if (!blocks.length && !fill) return;
+
+    // Reduced motion keeps the copy at full contrast and skips the rail entirely.
+    if (reduced) return;
+
+    function split(el) {
+      // data-raw survives re-splits (e.g. after a language switch)
+      var text = (el.getAttribute('data-raw') || el.textContent).replace(/\s+/g, ' ').trim();
+      el.setAttribute('data-raw', text);
+
+      var parts = text.split(' ');
+      var frag = document.createDocumentFragment();
+      var words = [];
+      parts.forEach(function (w, i) {
+        var span = document.createElement('span');
+        span.className = 'word';
+        span.textContent = w;
+        frag.appendChild(span);
+        words.push(span);
+        if (i < parts.length - 1) frag.appendChild(document.createTextNode(' '));
+      });
+      el.textContent = '';
+      el.appendChild(frag);
+      el._words = words;
+      el._lit = 0;
+    }
+
+    blocks.forEach(split);
+
+    function update() {
+      var vh = window.innerHeight;
+
+      blocks.forEach(function (el) {
+        var words = el._words;
+        if (!words || !words.length) return;
+
+        var r = el.getBoundingClientRect();
+        if (r.bottom < -vh || r.top > vh * 1.5) return;
+
+        // Lighting starts as the block crosses 88% of the viewport and
+        // completes once it has travelled its own height plus a little more.
+        var p = (vh * 0.88 - r.top) / (r.height + vh * 0.34);
+        p = p < 0 ? 0 : p > 1 ? 1 : p;
+
+        var lit = Math.round(p * words.length);
+        if (lit === el._lit) return;
+
+        var i;
+        if (lit > el._lit) {
+          for (i = el._lit; i < lit; i++) words[i].classList.add('lit');
+        } else {
+          for (i = el._lit - 1; i >= lit; i--) words[i].classList.remove('lit');
+        }
+        el._lit = lit;
+      });
+
+      if (fill && section) {
+        var sr = section.getBoundingClientRect();
+        var prog = (vh * 0.72 - sr.top) / sr.height;
+        prog = prog < 0 ? 0 : prog > 1 ? 1 : prog;
+        var pct = prog * 100;
+        fill.style.height = pct.toFixed(2) + '%';
+        dots.forEach(function (d) {
+          d.classList.toggle('on', pct >= (parseFloat(d.getAttribute('data-at')) || 0));
+        });
+      }
+    }
+
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) { requestAnimationFrame(function () { update(); ticking = false; }); ticking = true; }
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
+  /* ------------------------------------------------------------------------
      6. Magnetic buttons
      ------------------------------------------------------------------------ */
   function magnetic() {
@@ -558,6 +642,9 @@
       document.documentElement.setAttribute('lang', lang);
       document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
       toggles.forEach(function (t) { t.textContent = lang === 'en' ? 'AR' : 'EN'; });
+
+      // Direction flip reflows everything — let the scroll-driven modules recompute.
+      window.dispatchEvent(new Event('resize'));
     }
 
     toggles.forEach(function (t) {
@@ -655,6 +742,7 @@
     preloader().then(function () {
       reveal();
       counters();
+      storyMotion();
       splitText();
     });
   });
