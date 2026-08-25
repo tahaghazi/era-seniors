@@ -411,6 +411,149 @@ body.is-locked { overflow: hidden; }
 .tile:hover .tile__meta { transform: translateY(0); }
 
 /* --------------------------------------------------------------------------
+   Product box — the branded frame each product sits inside
+   -------------------------------------------------------------------------- */
+.pbox { cursor: pointer; }
+.pbox.hidden-tile { display: none; }
+
+.pbox__inner {
+  position: relative;
+  padding: 1.15rem;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(107, 18, 32, .30) 0%, rgba(15, 15, 18, 0) 62%),
+    #121116;
+  border: 1px solid rgba(243, 211, 186, .14);
+  transition: border-color .5s var(--ease-out-expo), transform .5s var(--ease-out-expo),
+              box-shadow .5s var(--ease-out-expo);
+}
+.pbox:hover .pbox__inner,
+.pbox:focus-visible .pbox__inner {
+  border-color: rgba(243, 211, 186, .45);
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .9);
+}
+.pbox:focus { outline: none; }
+.pbox:focus-visible .pbox__inner { outline: 1px solid var(--era-champagne); outline-offset: 3px; }
+
+/* Registration ticks, one per corner — they extend on hover */
+.pbox__tick {
+  position: absolute; width: 12px; height: 12px; pointer-events: none;
+  border-color: var(--era-champagne); opacity: .5;
+  transition: width .5s var(--ease-out-expo), height .5s var(--ease-out-expo), opacity .5s;
+}
+.pbox__tick.tl { top: -1px; left: -1px;  border-top: 1px solid; border-left: 1px solid; }
+.pbox__tick.tr { top: -1px; right: -1px; border-top: 1px solid; border-right: 1px solid; }
+.pbox__tick.bl { bottom: -1px; left: -1px;  border-bottom: 1px solid; border-left: 1px solid; }
+.pbox__tick.br { bottom: -1px; right: -1px; border-bottom: 1px solid; border-right: 1px solid; }
+.pbox:hover .pbox__tick { width: 26px; height: 26px; opacity: 1; }
+
+.pbox__head {
+  display: flex; align-items: center; gap: .75rem;
+  font-size: 9px; letter-spacing: .28em; text-transform: uppercase;
+  color: rgba(243, 211, 186, .55);
+  margin-bottom: .9rem;
+}
+.pbox__hair { flex: 1; height: 1px; background: rgba(243, 211, 186, .18); }
+.pbox__idx { color: var(--era-champagne); }
+
+.pbox__media {
+  position: relative; overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: #1b1a20;
+}
+.pbox__img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  transition: opacity .7s var(--ease-out-expo), transform 1.2s var(--ease-out-expo);
+}
+.pbox__img--b { opacity: 0; }
+.pbox:hover .pbox__img--a { opacity: 0; transform: scale(1.04); }
+.pbox:hover .pbox__img--b { opacity: 1; transform: scale(1.04); }
+
+/* Diagonal sheen that sweeps once on hover */
+.pbox__sheen {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(105deg, transparent 40%, rgba(243, 211, 186, .16) 50%, transparent 60%);
+  transform: translateX(-120%);
+}
+.pbox:hover .pbox__sheen { transition: transform 1.1s var(--ease-out-expo); transform: translateX(120%); }
+
+/* Logotype watermark that resolves over the shot */
+.pbox__wm {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-family: 'Bodoni Moda', Georgia, serif; font-size: clamp(3rem, 7vw, 4.5rem);
+  color: rgba(243, 211, 186, .9); letter-spacing: .04em;
+  opacity: 0; transform: scale(1.25);
+  text-shadow: 0 6px 40px rgba(0, 0, 0, .55);
+  transition: opacity .6s var(--ease-out-expo), transform .8s var(--ease-out-expo);
+  pointer-events: none;
+}
+.pbox:hover .pbox__wm { opacity: 1; transform: scale(1); }
+
+.pbox__count {
+  position: absolute; left: .7rem; bottom: .7rem;
+  font-size: 9px; letter-spacing: .22em; color: var(--era-bone);
+  background: rgba(15, 15, 18, .72); backdrop-filter: blur(6px);
+  padding: .35rem .6rem;
+}
+
+.pbox__meta { padding-top: 1.1rem; }
+.pbox__rule {
+  display: block; height: 1px; width: 100%;
+  background: linear-gradient(to right, var(--era-champagne), rgba(243, 211, 186, 0));
+  transform: scaleX(.18); transform-origin: left;
+  transition: transform .7s var(--ease-out-expo);
+}
+.pbox:hover .pbox__rule { transform: scaleX(1); }
+
+.pbox__name { font-family: 'Bodoni Moda', Georgia, serif; font-size: 1.4rem; margin-top: .85rem; color: var(--era-bone); }
+.pbox__ar { font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: .8rem; color: rgba(241, 239, 230, .42); margin-top: .2rem; }
+
+.pbox__row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: .9rem; }
+.pbox__colour { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(241, 239, 230, .55); }
+.pbox__dots { display: flex; gap: .3rem; }
+.pbox__dots i {
+  width: 13px; height: 13px; border-radius: 999px; display: block;
+  border: 1px solid rgba(243, 211, 186, .3);
+}
+
+.pbox__sizes { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .9rem; }
+.pbox__sizes span {
+  font-size: 9px; letter-spacing: .12em; padding: .25rem .5rem; min-width: 26px; text-align: center;
+  border: 1px solid rgba(243, 211, 186, .16); color: rgba(241, 239, 230, .5);
+  transition: border-color .4s, color .4s;
+}
+.pbox:hover .pbox__sizes span { border-color: rgba(243, 211, 186, .34); color: rgba(241, 239, 230, .78); }
+
+.size-chip {
+  display: inline-grid; place-items: center; min-width: 54px; padding: .7rem .9rem;
+  border: 1px solid rgba(243, 211, 186, .22); color: var(--era-bone);
+  font-size: 12px; letter-spacing: .18em;
+  transition: background-color .4s, color .4s, border-color .4s;
+}
+.size-chip:hover { background: var(--era-champagne); color: var(--era-ink); border-color: var(--era-champagne); }
+
+/* Product lightbox */
+#plightbox { opacity: 0; visibility: hidden; transition: opacity .45s var(--ease-out-expo), visibility .45s; }
+#plightbox.open { opacity: 1; visibility: visible; }
+#pl-img { transform: scale(.95); opacity: 0; transition: transform .55s var(--ease-out-expo), opacity .45s; }
+#plightbox.open #pl-img { transform: scale(1); opacity: 1; }
+#pl-thumbs::-webkit-scrollbar { height: 3px; }
+#pl-thumbs::-webkit-scrollbar-thumb { background: rgba(243, 211, 186, .3); }
+.pl-thumb {
+  width: 54px; height: 72px; object-fit: cover; flex-shrink: 0; cursor: pointer;
+  border: 1px solid transparent; opacity: .45;
+  transition: opacity .35s, border-color .35s;
+}
+.pl-thumb:hover { opacity: .8; }
+.pl-thumb.on { opacity: 1; border-color: var(--era-champagne); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pbox__sheen, .pbox__wm { display: none; }
+  .pbox:hover .pbox__inner { transform: none; }
+}
+
+/* --------------------------------------------------------------------------
    Lightbox
    -------------------------------------------------------------------------- */
 #lightbox {

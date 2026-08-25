@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Products — ERA SENIORS</title>
+<meta name="description" content="The ERA Seniors catalogue: varsity jackets, wool coach jackets, quarter zips, hoodies, heritage tees and bottoms. Sizes S to XXL, manufactured in-house." />
+<meta name="theme-color" content="#4A0A14" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Products — ERA SENIORS" />
+<meta property="og:description" content="Varsity jackets, quarter zips, hoodies and heritage tees. Sizes S to XXL, manufactured in-house." />
+<meta property="og:image" content="https://tahaghazi.github.io/era-seniors/assets/img/products/campaign-poster-full.webp" />
+<meta property="og:url" content="https://tahaghazi.github.io/era-seniors/products.html" />
+<meta property="og:site_name" content="ERA SENIORS" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://tahaghazi.github.io/era-seniors/assets/img/products/campaign-poster-full.webp" />
+
+<link rel="icon" href="assets/img/brand/logo-mark.jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { wine:'#4A0A14', maroon:'#6B1220', burgundy:'#A81F3D', ember:'#D62128',
+                gold:'#F5A623', champagne:'#F3D3BA', bone:'#F1EFE6', navy:'#1E2749',
+                mocha:'#8A5A44', ink:'#0F0F12' },
+      fontFamily: { serif:['"Bodoni Moda"','Georgia','serif'], sans:['Inter','system-ui','sans-serif'],
+                    poster:['Anton','Impact','sans-serif'], ar:['"IBM Plex Sans Arabic"','sans-serif'] }
+    } }
+  };
+</script>
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="font-sans bg-ink text-bone antialiased">
+
+<div id="preloader" class="mesh-wine grain overflow-hidden">
+  <div class="relative z-10 flex flex-col items-center gap-8 px-6">
+    <div class="text-center">
+      <div class="logotype text-champagne text-6xl sm:text-7xl">ERA</div>
+      <div class="mt-3 text-[10px] tracking-brand text-champagne/70">CATALOGUE</div>
+    </div>
+    <div id="loader-bar" class="loader-bar"><span></span></div>
+    <div class="flex items-center gap-3 text-[10px] tracking-[0.3em] text-champagne/60">
+      <span id="loader-pct">000</span><span>%</span>
+    </div>
+  </div>
+</div>
+
+<div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursor-ring" aria-hidden="true"><span class="cursor-text" id="cursor-text"></span></div>
+
+<div class="fixed top-0 left-0 right-0 h-[2px] z-[120]" aria-hidden="true">
+  <div id="progress" class="h-full bg-gradient-to-r from-ember via-burgundy to-champagne"></div>
+</div>
+
+<!-- ══ NAV ══ -->
+<header id="nav" class="fixed top-0 inset-x-0 z-[100] border-b border-transparent">
+  <nav class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14 h-[74px] flex items-center justify-between">
+    <a href="index.html" class="flex items-baseline gap-2.5 shrink-0" aria-label="ERA Seniors — home">
+      <span class="logotype text-champagne text-[26px] leading-none">ERA</span>
+      <span class="text-[8px] tracking-brand text-champagne/60 hidden sm:block">SENIORS</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9 text-[11px] tracking-[0.2em] uppercase text-bone/70">
+      <a href="index.html#story" class="nav-link" data-en="Story" data-ar="قصتنا">Story</a>
+      <a href="index.html#identity" class="nav-link" data-en="Identity" data-ar="الهوية">Identity</a>
+      <a href="products.html" class="nav-link active text-champagne" data-en="Products" data-ar="المنتجات">Products</a>
+      <a href="index.html#collections" class="nav-link" data-en="Designs" data-ar="التصاميم">Designs</a>
+      <a href="index.html#team" class="nav-link" data-en="Team" data-ar="الفريق">Team</a>
+      <a href="index.html#process" class="nav-link" data-en="Process" data-ar="الخطوات">Process</a>
+    </div>
+    <div class="flex items-center gap-3 sm:gap-5">
+      <button data-lang-toggle class="text-[10px] tracking-[0.2em] w-9 h-9 grid place-items-center rounded-full border border-champagne/25 text-champagne/80 hover:border-champagne hover:text-champagne transition-colors" aria-label="Switch language">AR</button>
+      <a href="index.html#contact" data-magnetic="0.3" class="btn hidden sm:inline-flex px-6 py-3 border border-champagne/35 text-[10px] tracking-[0.2em] uppercase" style="--btn-fill:#F3D3BA">
+        <span class="btn-label text-champagne" data-en="Start a class order" data-ar="اطلب لدفعتك">Start a class order</span>
+      </a>
+      <button id="burger" class="burger lg:hidden w-10 h-10 grid place-items-center gap-[5px]" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="block w-6 h-[1.5px] bg-bone"></span><span class="block w-6 h-[1.5px] bg-bone"></span><span class="block w-6 h-[1.5px] bg-bone"></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div id="mobile-menu" class="fixed inset-0 z-[95] mesh-wine grain lg:hidden overflow-hidden">
+  <div class="relative z-10 h-full flex flex-col justify-center px-8 gap-1">
+    <a href="index.html" class="logotype text-5xl text-bone py-2" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="products.html" class="logotype text-5xl text-champagne py-2" data-en="Products" data-ar="المنتجات">Products</a>
+    <a href="index.html#story" class="logotype text-5xl text-bone py-2" data-en="Story" data-ar="قصتنا">Story</a>
+    <a href="index.html#identity" class="logotype text-5xl text-bone py-2" data-en="Identity" data-ar="الهوية">Identity</a>
+    <a href="index.html#team" class="logotype text-5xl text-bone py-2" data-en="Team" data-ar="الفريق">Team</a>
+    <a href="index.html#contact" class="logotype text-5xl text-bone py-2" data-en="Contact" data-ar="تواصل">Contact</a>
+    <div class="mt-10 text-[10px] tracking-brand text-champagne/50">EST. 2026 — @ERA_SENIORS</div>
+  </div>
+</div>
+
+<main>
+
+<!-- ══ HERO ══ -->
+<section class="relative mesh-wine grain overflow-hidden pt-[74px]">
+  <div class="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14 py-20 sm:py-28 grid lg:grid-cols-12 gap-14 items-center">
+    <div class="lg:col-span-7" data-stagger="120">
+      <div class="flex items-center gap-4 mb-8" data-reveal>
+        <span class="w-10 h-px bg-champagne"></span>
+        <span class="text-[10px] tracking-brand text-champagne" data-scramble data-en="THE CATALOGUE" data-ar="الكتالوج">THE CATALOGUE</span>
+      </div>
+      <h1 class="font-serif text-[clamp(2.8rem,8vw,7rem)] leading-[0.94] text-bone" data-reveal="clip"
+          data-en="Every piece your class will actually wear." data-ar="كل قطعة دفعتك هتلبسها فعلًا.">
+        Every piece your class will actually wear.
+      </h1>
+      <p class="mt-9 max-w-[52ch] text-[15px] leading-[1.85] text-bone/65" data-reveal
+         data-en="Twelve styles across jackets, quarter zips, hoodies, tees and bottoms. Every one cut, sewn and embroidered on our own line, in sizes S through XXL."
+         data-ar="اتناشر ستايل بين الجواكت والكوارتر زيب والهودي والتيشيرتات والبناطيل. كلها مقصوصة ومخيطة ومطرزة على خطنا، بمقاسات من S لـ XXL.">
+        Twelve styles across jackets, quarter zips, hoodies, tees and bottoms. Every one cut, sewn and embroidered on our own line, in sizes S through XXL.
+      </p>
+      <div class="mt-11 flex flex-wrap gap-10" data-reveal>
+        <div><div class="font-serif text-4xl text-champagne"><span data-count="12">0</span></div><div class="mt-1 text-[9px] tracking-brand text-bone/45">STYLES</div></div>
+        <div><div class="font-serif text-4xl text-champagne"><span data-count="39">0</span></div><div class="mt-1 text-[9px] tracking-brand text-bone/45">SHOTS</div></div>
+        <div><div class="font-serif text-4xl text-champagne">S&ndash;XXL</div><div class="mt-1 text-[9px] tracking-brand text-bone/45">SIZE RANGE</div></div>
+      </div>
+    </div>
+    <div class="lg:col-span-5" data-reveal="right">
+      <img src="assets/img/products/campaign-poster-full.webp" width="1500" height="2009" decoding="async"
+           alt="ERA Seniors senior collection campaign poster"
+           class="w-full rounded-sm shadow-2xl shadow-black/70" />
+    </div>
+  </div>
+
+  <div class="relative z-10 border-t border-bone/15 py-4 marquee" style="--speed:34s">
+    <div class="marquee__track text-[11px] tracking-brand text-bone/55">
+      <span>VARSITY JACKETS</span><span>&#9670;</span><span>WOOL COACH JACKETS</span><span>&#9670;</span>
+      <span>QUARTER ZIPS</span><span>&#9670;</span><span>SENIORS HOODIES</span><span>&#9670;</span>
+      <span>HERITAGE TEES</span><span>&#9670;</span><span>SWEATPANTS</span><span>&#9670;</span>
+      <span>SIZES S &ndash; XXL</span><span>&#9670;</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GRID ══ -->
+<section id="catalogue" class="relative bg-ink py-20 sm:py-28 scroll-mt-20">
+  <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14" data-stagger="100">
+      <div data-reveal>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="w-10 h-px bg-ember"></span>
+          <span class="text-[10px] tracking-brand text-ember" data-scramble data-en="01 — THE RANGE" data-ar="٠١ — التشكيلة">01 — THE RANGE</span>
+        </div>
+        <h2 class="font-serif text-[clamp(2rem,5vw,4rem)] leading-[1.02] text-bone"
+            data-en="The range." data-ar="التشكيلة.">The range.</h2>
+      </div>
+      <div class="flex flex-wrap gap-2" data-reveal><button class="filter-btn active px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="all" aria-pressed="true">All <span class="opacity-40 ml-1">12</span></button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="jackets" aria-pressed="false">Jackets <span class="opacity-40 ml-1">03</span></button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="quarterzip" aria-pressed="false">Quarter Zip <span class="opacity-40 ml-1">02</span></button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="hoodies" aria-pressed="false">Hoodies <span class="opacity-40 ml-1">01</span></button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="tees" aria-pressed="false">Tees <span class="opacity-40 ml-1">04</span></button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="bottoms" aria-pressed="false">Bottoms <span class="opacity-40 ml-1">01</span></button>
+        <button class="filter-btn px-5 py-2.5 border border-bone/25 text-[10px] tracking-[0.2em] uppercase" data-filter="accessories" aria-pressed="false">Accessories <span class="opacity-40 ml-1">01</span></button></div>
+    </div>
+
+    <div id="pgrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger="80">
+      <article class="pbox" data-cat="jackets" data-id="varsity-maroon" tabindex="0" role="button"
+               aria-label="View Varsity Jacket in Maroon / Cream" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">01</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">JACKETS</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/varsity-maroon-01-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt="Varsity Jacket in Maroon / Cream"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/varsity-maroon-02-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">05 SHOTS</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">Varsity Jacket</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">جاكيت فارسيتي</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Maroon / Cream</span>
+              <span class="pbox__dots"><i style="background:#6B1220"></i><i style="background:#EFE7D6"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article>
+      <article class="pbox" data-cat="jackets" data-id="varsity-navy" tabindex="0" role="button"
+               aria-label="View Varsity Jacket in Navy / Cream" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">02</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">JACKETS</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/varsity-navy-01-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt="Varsity Jacket in Navy / Cream"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/varsity-navy-02-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">05 SHOTS</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">Varsity Jacket</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">جاكيت فارسيتي</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Navy / Cream</span>
+              <span class="pbox__dots"><i style="background:#1E2749"></i><i style="background:#EFE7D6"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article>
+      <article class="pbox" data-cat="jackets" data-id="coach-maroon" tabindex="0" role="button"
+               aria-label="View Wool Coach Jacket in Maroon" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">03</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">JACKETS</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/coach-maroon-01-card.webp" width="820" height="1094" loading="lazy" decoding="async" alt="Wool Coach Jacket in Maroon"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/coach-maroon-02-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">04 SHOTS</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">Wool Coach Jacket</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">جاكيت كوتش صوف</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Maroon</span>
+              <span class="pbox__dots"><i style="background:#5C1220"></i><i style="background:#E8DCCB"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article>
+      <article class="pbox" data-cat="quarterzip" data-id="quarterzip-black" tabindex="0" role="button"
+               aria-label="View Quarter Zip in Black" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">04</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">QUARTER ZIP</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/quarterzip-black-01-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt="Quarter Zip in Black"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/quarterzip-black-02-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">05 SHOTS</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">Quarter Zip</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">كوارتر زيب</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Black</span>
+              <span class="pbox__dots"><i style="background:#17171A"></i><i style="background:#F3D3BA"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article>
+      <article class="pbox" data-cat="quarterzip" data-id="quarterzip-maroon" tabindex="0" role="button"
+               aria-label="View Quarter Zip in Maroon" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">05</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">QUARTER ZIP</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/quarterzip-maroon-01-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt="Quarter Zip in Maroon"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/quarterzip-maroon-02-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">04 SHOTS</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">Quarter Zip</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">كوارتر زيب</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Maroon</span>
+              <span class="pbox__dots"><i style="background:#6B1220"></i><i style="background:#F3D3BA"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article>
+      <article class="pbox" data-cat="hoodies" data-id="hoodie-maroon" tabindex="0" role="button"
+               aria-label="View Seniors Hoodie in Maroon" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">06</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">HOODIES</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/hoodie-maroon-01-card.webp" width="820" height="1094" loading="lazy" decoding="async" alt="Seniors Hoodie in Maroon"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/hoodie-maroon-02-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">05 SHOTS</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">Seniors Hoodie</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">هودي سينيورز</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Maroon</span>
+              <span class="pbox__dots"><i style="background:#6B1220"></i><i style="background:#F3D3BA"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article>
+      <article class="pbox" data-cat="tees" data-id="tee-emerald" tabindex="0" role="button"
+               aria-label="View Heritage Tee in Emerald" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">07</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">TEES</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/tee-emerald-01-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt="Heritage Tee in Emerald"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/tee-emerald-02-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">02 SHOTS</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">Heritage Tee</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">تي شيرت هيريتاج</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Emerald</span>
+              <span class="pbox__dots"><i style="background:#2F6B52"></i><i style="background:#D9B679"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article>
+      <article class="pbox" data-cat="tees" data-id="tee-wave" tabindex="0" role="button"
+               aria-label="View Heritage Tee in Wave Print" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">08</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">TEES</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/tee-wave-01-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt="Heritage Tee in Wave Print"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/tee-wave-02-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">03 SHOTS</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">Heritage Tee</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">تي شيرت هيريتاج</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Wave Print</span>
+              <span class="pbox__dots"><i style="background:#4E8C6A"></i><i style="background:#EFE7D6"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article>
+      <article class="pbox" data-cat="tees" data-id="tee-navy" tabindex="0" role="button"
+               aria-label="View Heritage Tee in Navy" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">09</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">TEES</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/tee-navy-01-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt="Heritage Tee in Navy"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/tee-navy-02-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">02 SHOTS</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">Heritage Tee</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">تي شيرت هيريتاج</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Navy</span>
+              <span class="pbox__dots"><i style="background:#1B2340"></i><i style="background:#D9B679"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article>
+      <article class="pbox" data-cat="tees" data-id="tee-portrait" tabindex="0" role="button"
+               aria-label="View Heritage Tee in Portrait Print" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">10</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">TEES</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/tee-portrait-01-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt="Heritage Tee in Portrait Print"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/tee-portrait-02-card.webp" width="820" height="1094" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">02 SHOTS</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">Heritage Tee</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">تي شيرت هيريتاج</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Portrait Print</span>
+              <span class="pbox__dots"><i style="background:#EFE7D6"></i><i style="background:#2E6B6B"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article>
+      <article class="pbox" data-cat="bottoms" data-id="sweatpants-black" tabindex="0" role="button"
+               aria-label="View Sweatpants in Black" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">11</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">BOTTOMS</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/sweatpants-black-01-card.webp" width="820" height="447" loading="lazy" decoding="async" alt="Sweatpants in Black"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/sweatpants-black-01-card.webp" width="820" height="447" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">01 SHOT</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">Sweatpants</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">بنطلون سويت</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Black</span>
+              <span class="pbox__dots"><i style="background:#17171A"></i><i style="background:#9A9A9A"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article>
+      <article class="pbox" data-cat="accessories" data-id="tote-canvas" tabindex="0" role="button"
+               aria-label="View ERA University Tote in Natural Canvas" data-cursor="View">
+        <div class="pbox__inner">
+          <span class="pbox__tick tl"></span><span class="pbox__tick tr"></span>
+          <span class="pbox__tick bl"></span><span class="pbox__tick br"></span>
+
+          <header class="pbox__head">
+            <span class="pbox__idx">12</span>
+            <span class="pbox__hair"></span>
+            <span class="pbox__cat">ACCESSORIES</span>
+          </header>
+
+          <div class="pbox__media">
+            <img class="pbox__img pbox__img--a" src="assets/img/products/tote-canvas-01-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt="ERA University Tote in Natural Canvas"/>
+            <img class="pbox__img pbox__img--b" src="assets/img/products/tote-canvas-01-card.webp" width="820" height="1098" loading="lazy" decoding="async" alt=""/>
+            <span class="pbox__sheen" aria-hidden="true"></span>
+            <span class="pbox__wm" aria-hidden="true">ERA</span>
+            <span class="pbox__count">01 SHOT</span>
+          </div>
+
+          <footer class="pbox__meta">
+            <span class="pbox__rule"></span>
+            <h3 class="pbox__name">ERA University Tote</h3>
+            <p class="pbox__ar" lang="ar" dir="rtl">شنطة توت</p>
+            <div class="pbox__row">
+              <span class="pbox__colour">Natural Canvas</span>
+              <span class="pbox__dots"><i style="background:#E3D9C4"></i><i style="background:#6B1220"></i></span>
+            </div>
+            <div class="pbox__sizes"><span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span></div>
+          </footer>
+        </div>
+      </article></div>
+
+    <p id="pempty" class="hidden py-24 text-center text-[12px] tracking-brand text-bone/40">NOTHING IN THIS CATEGORY YET</p>
+  </div>
+</section>
+
+<!-- ══ COLOURWAYS ══ -->
+<section class="relative mesh-ember grain py-20 sm:py-28 overflow-hidden">
+  <div class="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+    <div class="flex items-center gap-4 mb-12" data-reveal>
+      <span class="w-10 h-px bg-gold"></span>
+      <span class="text-[10px] tracking-brand text-gold" data-scramble data-en="02 — COLOURWAYS" data-ar="٠٢ — الألوان">02 — COLOURWAYS</span>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5" data-stagger="70">
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#6B1220" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-28 sm:h-36" style="background:#6B1220"></div>
+        <div class="p-4 bg-white/[0.03]"><div class="text-[12px] text-bone">Maroon</div><div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#6B1220</div></div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#1E2749" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-28 sm:h-36" style="background:#1E2749"></div>
+        <div class="p-4 bg-white/[0.03]"><div class="text-[12px] text-bone">Varsity Navy</div><div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#1E2749</div></div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#EFE7D6" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-28 sm:h-36" style="background:#EFE7D6"></div>
+        <div class="p-4 bg-white/[0.03]"><div class="text-[12px] text-bone">Cream</div><div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#EFE7D6</div></div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#17171A" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-28 sm:h-36 border border-white/10" style="background:#17171A"></div>
+        <div class="p-4 bg-white/[0.03]"><div class="text-[12px] text-bone">Black</div><div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#17171A</div></div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#2F6B52" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-28 sm:h-36" style="background:#2F6B52"></div>
+        <div class="p-4 bg-white/[0.03]"><div class="text-[12px] text-bone">Emerald</div><div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#2F6B52</div></div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+      <button class="swatch text-left rounded-sm overflow-hidden" data-hex="#9A9A9A" data-reveal data-cursor="Copy">
+        <div class="swatch__chip h-28 sm:h-36" style="background:#9A9A9A"></div>
+        <div class="p-4 bg-white/[0.03]"><div class="text-[12px] text-bone">Heather Grey</div><div class="text-[10px] tracking-[0.15em] text-bone/40 mt-1">#9A9A9A</div></div>
+        <span class="swatch__copy text-champagne">Copy hex</span>
+      </button>
+    </div>
+
+    <div class="mt-16 grid md:grid-cols-2 gap-px bg-bone/10 border border-bone/10" data-stagger="120">
+      <div class="bg-ink/60 p-8 sm:p-10" data-reveal>
+        <div class="text-[10px] tracking-brand text-champagne mb-6" data-en="SIZE RANGE" data-ar="المقاسات">SIZE RANGE</div>
+        <div class="flex flex-wrap gap-3">
+          <span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span>
+          <span class="size-chip">XL</span><span class="size-chip">XXL</span>
+        </div>
+        <p class="mt-6 text-[13px] leading-[1.85] text-bone/55"
+           data-en="Every style runs the full range. We bring a sizing table to campus before the order locks, so nobody guesses."
+           data-ar="كل ستايل متاح بكل المقاسات. بنجيب ترابيزة مقاسات للجامعة قبل ما الطلب يتقفل، علشان محدش يخمن.">
+          Every style runs the full range. We bring a sizing table to campus before the order locks, so nobody guesses.
+        </p>
+      </div>
+      <div class="bg-ink/60 p-8 sm:p-10" data-reveal>
+        <div class="text-[10px] tracking-brand text-champagne mb-6" data-en="CUSTOMISATION" data-ar="التخصيص">CUSTOMISATION</div>
+        <ul class="space-y-3 text-[13px] leading-[1.7] text-bone/65">
+          <li>— Faculty crest, chest and back</li>
+          <li>— Graduation year on the sleeve</li>
+          <li>— Names on the back of every piece</li>
+          <li>— Class colourway matched to your faculty</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LOOKBOOK ══ -->
+<section class="relative bg-ink py-20 sm:py-28">
+  <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+    <div class="flex items-center gap-4 mb-12" data-reveal>
+      <span class="w-10 h-px bg-champagne"></span>
+      <span class="text-[10px] tracking-brand text-champagne" data-scramble data-en="03 — LOOKBOOK" data-ar="٠٣ — اللوك بوك">03 — LOOKBOOK</span>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6" data-stagger="140">
+      <img src="assets/img/products/campaign-group-full.webp" width="1500" height="818" loading="lazy" decoding="async"
+           alt="ERA Seniors group lookbook shot" class="w-full rounded-sm shadow-2xl shadow-black/60" data-reveal="clip" />
+      <img src="assets/img/products/campaign-pair-full.webp" width="1500" height="1120" loading="lazy" decoding="async"
+           alt="ERA Seniors pair in maroon hoodies" class="w-full rounded-sm shadow-2xl shadow-black/60" data-reveal="clip" />
+    </div>
+  </div>
+</section>
+
+<div class="marquee bg-ember py-5" style="--speed:26s;--dir:reverse">
+  <div class="marquee__track font-poster text-4xl sm:text-6xl uppercase text-white/95">
+    <span>Order for your class</span><span class="text-white/40">&#10022;</span>
+    <span>Sizes S to XXL</span><span class="text-white/40">&#10022;</span>
+    <span>Made on our own line</span><span class="text-white/40">&#10022;</span>
+  </div>
+</div>
+
+<!-- ══ CTA ══ -->
+<section class="relative mesh-wine grain py-24 sm:py-32 overflow-hidden">
+  <div class="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14 text-center">
+    <h2 class="font-serif text-[clamp(2.2rem,6vw,5rem)] leading-[1] text-bone max-w-[18ch] mx-auto" data-reveal
+        data-en="Pick your pieces. We handle the rest." data-ar="اختار قطعك. وإحنا نتصرف في الباقي.">
+      Pick your pieces. We handle the rest.
+    </h2>
+    <div class="mt-11 flex flex-col sm:flex-row items-center justify-center gap-4" data-reveal>
+      <a href="index.html#contact" data-magnetic="0.28" class="btn px-9 py-4 bg-champagne text-ink text-[10px] tracking-[0.22em] uppercase w-full sm:w-auto" style="--btn-fill:#D62128;--btn-text:#fff">
+        <span class="btn-label" data-en="Start a class order" data-ar="اطلب لدفعتك">Start a class order</span><span class="arrow rtl-flip">&rarr;</span>
+      </a>
+      <a href="index.html#process" data-magnetic="0.28" class="btn px-9 py-4 border border-bone/30 text-[10px] tracking-[0.22em] uppercase w-full sm:w-auto" style="--btn-fill:#F1EFE6">
+        <span class="btn-label text-bone" data-en="See how it works" data-ar="شوف إزاي بنشتغل">See how it works</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-ink pt-20 pb-10">
+  <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+    <div class="grid md:grid-cols-12 gap-12 pb-16">
+      <div class="md:col-span-5">
+        <div class="logotype text-champagne text-5xl">ERA</div>
+        <div class="mt-2 text-[9px] tracking-brand text-champagne/60">SENIORS</div>
+        <p class="mt-7 max-w-[34ch] text-[13px] leading-[1.85] text-bone/50 font-serif italic">
+          We don&rsquo;t just make clothes. We are the architects of your historical era.
+        </p>
+      </div>
+      <div class="md:col-span-3">
+        <div class="text-[10px] tracking-brand text-bone/40 mb-5">SITEMAP</div>
+        <ul class="space-y-3 text-[13px] text-bone/70">
+          <li><a href="index.html" class="hover:text-champagne transition-colors">Home</a></li>
+          <li><a href="products.html" class="hover:text-champagne transition-colors">Products</a></li>
+          <li><a href="index.html#story" class="hover:text-champagne transition-colors">Story</a></li>
+          <li><a href="index.html#identity" class="hover:text-champagne transition-colors">Brand identity</a></li>
+          <li><a href="index.html#process" class="hover:text-champagne transition-colors">Process</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <div class="text-[10px] tracking-brand text-bone/40 mb-5">CATALOGUE</div>
+        <ul class="space-y-3 text-[13px] text-bone/70">
+          <li>Varsity &amp; wool coach jackets</li>
+          <li>Quarter zips &amp; hoodies</li>
+          <li>Heritage tees</li>
+          <li>Sweatpants &amp; accessories</li>
+        </ul>
+      </div>
+    </div>
+    <div class="hairline pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] tracking-brand text-bone/35">
+      <span>&copy; <span id="year">2026</span> ERA SENIORS — EST. 2026</span>
+      <span>SENIORS · WEAR · STRATEGY</span>
+      <a href="https://instagram.com/era_seniors" target="_blank" rel="noopener" class="hover:text-champagne transition-colors">@ERA_SENIORS</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ PRODUCT LIGHTBOX ══ -->
+<div id="plightbox" class="fixed inset-0 z-[160] bg-ink/97 backdrop-blur-xl p-4 sm:p-8" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Product preview">
+  <button id="pl-close" class="absolute top-4 right-4 z-10 w-12 h-12 grid place-items-center text-bone/70 hover:text-champagne text-2xl transition-colors" aria-label="Close">&times;</button>
+  <button id="pl-prev" class="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 grid place-items-center text-bone/60 hover:text-champagne text-3xl transition-colors" aria-label="Previous shot">&#8249;</button>
+  <button id="pl-next" class="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 grid place-items-center text-bone/60 hover:text-champagne text-3xl transition-colors" aria-label="Next shot">&#8250;</button>
+
+  <div class="h-full flex flex-col items-center justify-center gap-5">
+    <img id="pl-img" src="" alt="" class="max-h-[64vh] w-auto object-contain rounded-sm shadow-2xl shadow-black" />
+    <div class="text-center">
+      <div id="pl-cat" class="text-[9px] tracking-brand text-champagne/70 mb-2"></div>
+      <div id="pl-name" class="font-serif text-2xl text-bone"></div>
+      <div id="pl-ar" class="font-ar text-[13px] text-bone/50 mt-1" lang="ar" dir="rtl"></div>
+      <div id="pl-colour" class="mt-3 text-[10px] tracking-brand text-bone/40"></div>
+    </div>
+    <div id="pl-thumbs" class="flex gap-2 overflow-x-auto max-w-full px-2 pb-1"></div>
+  </div>
+</div>
+
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[170] bg-champagne text-ink px-6 py-3.5 text-[10px] tracking-[0.2em] uppercase shadow-2xl"><span id="toast-text"></span></div>
+
+<button id="to-top" data-magnetic="0.3" class="fixed bottom-6 right-6 z-[130] w-12 h-12 rounded-full border border-champagne/30 bg-ink/70 backdrop-blur grid place-items-center text-champagne hover:bg-champagne hover:text-ink transition-colors" aria-label="Back to top">&uarr;</button>
+
+<script>window.ERA_PRODUCTS = {"varsity-maroon": {"en": "Varsity Jacket", "ar": "جاكيت فارسيتي", "colour": "Maroon / Cream", "cat": "JACKETS", "shots": [{"full": "assets/img/products/varsity-maroon-01-full.webp", "card": "assets/img/products/varsity-maroon-01-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/varsity-maroon-02-full.webp", "card": "assets/img/products/varsity-maroon-02-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/varsity-maroon-03-full.webp", "card": "assets/img/products/varsity-maroon-03-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/varsity-maroon-04-full.webp", "card": "assets/img/products/varsity-maroon-04-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/varsity-maroon-05-full.webp", "card": "assets/img/products/varsity-maroon-05-card.webp", "w": 1500, "h": 2009}]}, "varsity-navy": {"en": "Varsity Jacket", "ar": "جاكيت فارسيتي", "colour": "Navy / Cream", "cat": "JACKETS", "shots": [{"full": "assets/img/products/varsity-navy-01-full.webp", "card": "assets/img/products/varsity-navy-01-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/varsity-navy-02-full.webp", "card": "assets/img/products/varsity-navy-02-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/varsity-navy-03-full.webp", "card": "assets/img/products/varsity-navy-03-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/varsity-navy-04-full.webp", "card": "assets/img/products/varsity-navy-04-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/varsity-navy-05-full.webp", "card": "assets/img/products/varsity-navy-05-card.webp", "w": 1500, "h": 2009}]}, "coach-maroon": {"en": "Wool Coach Jacket", "ar": "جاكيت كوتش صوف", "colour": "Maroon", "cat": "JACKETS", "shots": [{"full": "assets/img/products/coach-maroon-01-full.webp", "card": "assets/img/products/coach-maroon-01-card.webp", "w": 1500, "h": 2001}, {"full": "assets/img/products/coach-maroon-02-full.webp", "card": "assets/img/products/coach-maroon-02-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/coach-maroon-03-full.webp", "card": "assets/img/products/coach-maroon-03-card.webp", "w": 1500, "h": 2001}, {"full": "assets/img/products/coach-maroon-04-full.webp", "card": "assets/img/products/coach-maroon-04-card.webp", "w": 1500, "h": 2009}]}, "quarterzip-black": {"en": "Quarter Zip", "ar": "كوارتر زيب", "colour": "Black", "cat": "QUARTER ZIP", "shots": [{"full": "assets/img/products/quarterzip-black-01-full.webp", "card": "assets/img/products/quarterzip-black-01-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/quarterzip-black-02-full.webp", "card": "assets/img/products/quarterzip-black-02-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/quarterzip-black-03-full.webp", "card": "assets/img/products/quarterzip-black-03-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/quarterzip-black-04-full.webp", "card": "assets/img/products/quarterzip-black-04-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/quarterzip-black-05-full.webp", "card": "assets/img/products/quarterzip-black-05-card.webp", "w": 1500, "h": 2009}]}, "quarterzip-maroon": {"en": "Quarter Zip", "ar": "كوارتر زيب", "colour": "Maroon", "cat": "QUARTER ZIP", "shots": [{"full": "assets/img/products/quarterzip-maroon-01-full.webp", "card": "assets/img/products/quarterzip-maroon-01-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/quarterzip-maroon-02-full.webp", "card": "assets/img/products/quarterzip-maroon-02-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/quarterzip-maroon-03-full.webp", "card": "assets/img/products/quarterzip-maroon-03-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/quarterzip-maroon-04-full.webp", "card": "assets/img/products/quarterzip-maroon-04-card.webp", "w": 1500, "h": 2009}]}, "hoodie-maroon": {"en": "Seniors Hoodie", "ar": "هودي سينيورز", "colour": "Maroon", "cat": "HOODIES", "shots": [{"full": "assets/img/products/hoodie-maroon-01-full.webp", "card": "assets/img/products/hoodie-maroon-01-card.webp", "w": 1500, "h": 2001}, {"full": "assets/img/products/hoodie-maroon-02-full.webp", "card": "assets/img/products/hoodie-maroon-02-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/hoodie-maroon-03-full.webp", "card": "assets/img/products/hoodie-maroon-03-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/hoodie-maroon-04-full.webp", "card": "assets/img/products/hoodie-maroon-04-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/hoodie-maroon-05-full.webp", "card": "assets/img/products/hoodie-maroon-05-card.webp", "w": 1500, "h": 2009}]}, "tee-emerald": {"en": "Heritage Tee", "ar": "تي شيرت هيريتاج", "colour": "Emerald", "cat": "TEES", "shots": [{"full": "assets/img/products/tee-emerald-01-full.webp", "card": "assets/img/products/tee-emerald-01-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/tee-emerald-02-full.webp", "card": "assets/img/products/tee-emerald-02-card.webp", "w": 1500, "h": 2009}]}, "tee-wave": {"en": "Heritage Tee", "ar": "تي شيرت هيريتاج", "colour": "Wave Print", "cat": "TEES", "shots": [{"full": "assets/img/products/tee-wave-01-full.webp", "card": "assets/img/products/tee-wave-01-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/tee-wave-02-full.webp", "card": "assets/img/products/tee-wave-02-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/tee-wave-03-full.webp", "card": "assets/img/products/tee-wave-03-card.webp", "w": 1500, "h": 2009}]}, "tee-navy": {"en": "Heritage Tee", "ar": "تي شيرت هيريتاج", "colour": "Navy", "cat": "TEES", "shots": [{"full": "assets/img/products/tee-navy-01-full.webp", "card": "assets/img/products/tee-navy-01-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/tee-navy-02-full.webp", "card": "assets/img/products/tee-navy-02-card.webp", "w": 1500, "h": 2009}]}, "tee-portrait": {"en": "Heritage Tee", "ar": "تي شيرت هيريتاج", "colour": "Portrait Print", "cat": "TEES", "shots": [{"full": "assets/img/products/tee-portrait-01-full.webp", "card": "assets/img/products/tee-portrait-01-card.webp", "w": 1500, "h": 2009}, {"full": "assets/img/products/tee-portrait-02-full.webp", "card": "assets/img/products/tee-portrait-02-card.webp", "w": 1500, "h": 2001}]}, "sweatpants-black": {"en": "Sweatpants", "ar": "بنطلون سويت", "colour": "Black", "cat": "BOTTOMS", "shots": [{"full": "assets/img/products/sweatpants-black-01-full.webp", "card": "assets/img/products/sweatpants-black-01-card.webp", "w": 1500, "h": 818}]}, "tote-canvas": {"en": "ERA University Tote", "ar": "شنطة توت", "colour": "Natural Canvas", "cat": "ACCESSORIES", "shots": [{"full": "assets/img/products/tote-canvas-01-full.webp", "card": "assets/img/products/tote-canvas-01-card.webp", "w": 1500, "h": 2009}]}};</script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

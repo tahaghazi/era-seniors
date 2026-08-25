@@ -24,14 +24,19 @@ python -m http.server 8080
 ## Structure
 
 ```
-index.html                  the whole page
+index.html                  the brand site
+products.html               the product catalogue
 assets/
   css/style.css             brand tokens, grain, gradients, all animation CSS
-  js/app.js                 16 interaction modules, no dependencies
-  img/brand/                logotype + the four business banners
+  js/app.js                 shared interaction modules, no dependencies
+  img/brand/                logotype + eight business banners
   img/designs/              ten sample designs
+  img/products/             12 products x card+full WebP (84 files, 5.4 MB)
   img/team/                 (empty — drop team headshots here)
 ```
+
+`products.html` is generated from a manifest, but it is committed as plain HTML —
+edit it directly like any other page.
 
 ---
 
@@ -48,6 +53,19 @@ assets/
 | 06 | Team | Four cards (placeholders — see below) |
 | 07 | Process | Your seven-stage pipeline: التخطيط → التصميم → القماش → التنفيذ → التدقيق → التغليف → النقل |
 | 08 | Contact | Enquiry form that hands off to WhatsApp or email |
+
+### products.html
+
+| # | Section | What's in it |
+|---|---------|--------------|
+| — | Hero | Campaign poster, style/shot counts, catalogue marquee |
+| 01 | The range | 12 product boxes, filterable by category, multi-shot lightbox |
+| 02 | Colourways | Six fabric colours (click to copy) + size range + customisation |
+| 03 | Lookbook | Two full-bleed campaign shots |
+
+The 12 products: varsity jacket (maroon and navy), wool coach jacket, quarter zip
+(black and maroon), seniors hoodie, four heritage tees, sweatpants, and the university tote.
+39 shots in total — click any box to page through that product's shots.
 
 ---
 
@@ -73,6 +91,21 @@ Search `index.html` for **`REPLACE ME`** — there are four:
 
 4. **"Within 24 hours"** — a response-time promise written for you, not one you stated.
    It appears twice in the contact section. Confirm it or change it.
+
+### About the product photography
+
+Every shot on `products.html` came from the `yaser` folder, and the source filenames
+(`Gemini_Generated_Image_*`) say they are **AI-generated renders, not photographs of
+manufactured stock**. That is completely normal for concept and pre-order presentation —
+but a customer looking at the catalogue cannot tell the difference. Before you push this
+to a class, decide whether to:
+
+- label the page as concept renders / pre-production visuals, or
+- replace the renders with photos of real samples as they come off the line.
+
+Two other things to check on that page: the **Heritage Tee — Portrait Print** carries a
+likeness of a public figure, and several tees carry Saudi state symbols. Confirm you are
+clear to sell both before taking orders.
 
 ### Claims to confirm
 
@@ -136,9 +169,15 @@ only activate on fine-pointer devices.
 ## Performance notes
 
 Images carry explicit `width`/`height` (no layout shift) and everything below the fold is
-`loading="lazy" decoding="async"`. Total image payload is **~2.0 MB** across 18 JPEGs.
-Converting them to WebP would cut that by roughly 60–70% — worth doing before you push the
-link to a whole graduating class on mobile data.
+`loading="lazy" decoding="async"`.
+
+Product images are **WebP at two sizes** — an 820px card and a 1500px full — generated from
+the 1792×2400 originals. The 39 product shots plus 3 campaign shots come to 5.4 MB on disk,
+but a first visit to `products.html` only pulls the 12 visible cards (~16–74 KB each); full
+sizes load on demand when the lightbox opens.
+
+The brand and design images on `index.html` are still JPEG (~2.0 MB). Converting those to
+WebP the same way would cut them by roughly 60–70%.
 
 ---
 

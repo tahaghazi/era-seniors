@@ -668,6 +668,139 @@
   }
 
   /* ------------------------------------------------------------------------
+     12b. Product catalogue — filtering plus a multi-shot lightbox.
+          No-ops on any page without #pgrid.
+     ------------------------------------------------------------------------ */
+  function products() {
+    var grid = $('#pgrid');
+    if (!grid) return;
+
+    var DATA = window.ERA_PRODUCTS || {};
+    var boxes = $$('.pbox', grid);
+    var empty = $('#pempty');
+    var buttons = $$('.filter-btn');
+
+    /* ---- filtering ---- */
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var cat = btn.getAttribute('data-filter');
+        buttons.forEach(function (b) {
+          b.classList.toggle('active', b === btn);
+          b.setAttribute('aria-pressed', String(b === btn));
+        });
+        var shown = 0;
+        boxes.forEach(function (box, i) {
+          var match = cat === 'all' || box.getAttribute('data-cat') === cat;
+          if (match) {
+            shown++;
+            box.classList.remove('hidden-tile');
+            box.style.opacity = '0';
+            box.style.transform = 'translateY(14px)';
+            setTimeout(function () { box.style.opacity = ''; box.style.transform = ''; }, 20 + i * 45);
+          } else {
+            box.classList.add('hidden-tile');
+          }
+        });
+        if (empty) empty.classList.toggle('hidden', shown > 0);
+      });
+    });
+
+    /* ---- lightbox ---- */
+    var box = $('#plightbox');
+    if (!box) return;
+
+    var elImg = $('#pl-img'), elCat = $('#pl-cat'), elName = $('#pl-name');
+    var elAr = $('#pl-ar'), elColour = $('#pl-colour'), elThumbs = $('#pl-thumbs');
+    var btnClose = $('#pl-close'), btnPrev = $('#pl-prev'), btnNext = $('#pl-next');
+
+    var current = null;   // product record
+    var shot = 0;
+    var lastFocus = null;
+
+    function paintThumbs() {
+      if (!elThumbs) return;
+      elThumbs.innerHTML = '';
+      if (current.shots.length < 2) return;
+      current.shots.forEach(function (s, i) {
+        var t = document.createElement('img');
+        t.className = 'pl-thumb' + (i === shot ? ' on' : '');
+        t.src = s.card;
+        t.alt = 'Shot ' + (i + 1);
+        t.loading = 'lazy';
+        t.addEventListener('click', function (e) { e.stopPropagation(); show(i); });
+        elThumbs.appendChild(t);
+      });
+    }
+
+    function show(i) {
+      if (!current) return;
+      var n = current.shots.length;
+      shot = (i + n) % n;
+      var s = current.shots[shot];
+      if (elImg) {
+        elImg.src = s.full;
+        elImg.width = s.w;
+        elImg.height = s.h;
+        elImg.alt = current.en + ' in ' + current.colour + ', shot ' + (shot + 1) + ' of ' + n;
+      }
+      $$('.pl-thumb', elThumbs).forEach(function (t, k) { t.classList.toggle('on', k === shot); });
+      var single = n < 2;
+      if (btnPrev) btnPrev.style.display = single ? 'none' : '';
+      if (btnNext) btnNext.style.display = single ? 'none' : '';
+    }
+
+    function open(id, trigger) {
+      current = DATA[id];
+      if (!current) return;
+      lastFocus = trigger || null;
+      shot = 0;
+      if (elCat) elCat.textContent = current.cat;
+      if (elName) elName.textContent = current.en;
+      if (elAr) elAr.textContent = current.ar;
+      if (elColour) elColour.textContent = current.colour + '  ·  S – XXL';
+      paintThumbs();
+      show(0);
+      box.classList.add('open');
+      box.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('is-locked');
+      if (btnClose) btnClose.focus();
+    }
+
+    function close() {
+      box.classList.remove('open');
+      box.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('is-locked');
+      if (lastFocus) lastFocus.focus();
+    }
+
+    boxes.forEach(function (b) {
+      b.addEventListener('click', function () { open(b.getAttribute('data-id'), b); });
+      b.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(b.getAttribute('data-id'), b); }
+      });
+    });
+
+    if (btnClose) btnClose.addEventListener('click', close);
+    if (btnPrev) btnPrev.addEventListener('click', function (e) { e.stopPropagation(); show(shot - 1); });
+    if (btnNext) btnNext.addEventListener('click', function (e) { e.stopPropagation(); show(shot + 1); });
+    box.addEventListener('click', function (e) { if (e.target === box) close(); });
+
+    document.addEventListener('keydown', function (e) {
+      if (!box.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(shot - 1);
+      if (e.key === 'ArrowRight') show(shot + 1);
+    });
+
+    var sx = 0;
+    box.addEventListener('touchstart', function (e) { sx = e.changedTouches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', function (e) {
+      var dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 60) show(dx > 0 ? shot - 1 : shot + 1);
+    }, { passive: true });
+  }
+
+  /* ------------------------------------------------------------------------
      13. Drag-to-scroll on the banner strip
      ------------------------------------------------------------------------ */
   function dragScroll() {
@@ -800,6 +933,7 @@
     navigation();
     palette();
     gallery();
+    products();
     dragScroll();
     language();
     form();
