@@ -285,6 +285,72 @@
   }
 
   /* ------------------------------------------------------------------------
+     5c. Hero exit — the lockup drifts, swells and fades as you scroll off it
+     ------------------------------------------------------------------------ */
+  function heroExit() {
+    var lockup = $('#hero-lockup');
+    if (!lockup || reduced) return;
+
+    var ticking = false;
+    function update() {
+      var vh = window.innerHeight;
+      var p = Math.min(window.scrollY / vh, 1);
+      if (p > 1) return;
+      lockup.style.transform = 'translate3d(0,' + (p * -80).toFixed(1) + 'px,0) scale(' + (1 + p * 0.14).toFixed(4) + ')';
+      lockup.style.opacity = Math.max(0, 1 - p * 1.35).toFixed(3);
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    update();
+  }
+
+  /* ------------------------------------------------------------------------
+     5d. Scramble — section labels decode themselves on first view.
+         The character pool is drawn from the target string, so an Arabic
+         label scrambles with Arabic glyphs rather than Latin ones.
+     ------------------------------------------------------------------------ */
+  function scramble() {
+    var nodes = $$('[data-scramble]');
+    if (!nodes.length || reduced || !('IntersectionObserver' in window)) return;
+
+    function run(el) {
+      var target = el.textContent;
+      var pool = target.replace(/\s/g, '');
+      if (pool.length < 2) return;
+
+      var frames = 0;
+      var total = 24;
+      var timer = setInterval(function () {
+        frames++;
+        var settled = (frames / total) * target.length;
+        var out = '';
+        for (var i = 0; i < target.length; i++) {
+          var ch = target.charAt(i);
+          if (/\s/.test(ch) || i < settled) out += ch;
+          else out += pool.charAt(Math.floor(Math.random() * pool.length));
+        }
+        el.textContent = out;
+        if (frames >= total) {
+          clearInterval(timer);
+          el.textContent = target;
+        }
+      }, 32);
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        run(e.target);
+      });
+    }, { threshold: 0.8 });
+
+    nodes.forEach(function (n) { io.observe(n); });
+  }
+
+  /* ------------------------------------------------------------------------
      6. Magnetic buttons
      ------------------------------------------------------------------------ */
   function magnetic() {
@@ -727,6 +793,7 @@
     // Interaction modules can bind straight away.
     cursor();
     parallax();
+    heroExit();
     magnetic();
     tilt();
     marquee();
@@ -743,6 +810,7 @@
       reveal();
       counters();
       storyMotion();
+      scramble();
       splitText();
     });
   });

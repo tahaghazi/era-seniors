@@ -99,6 +99,38 @@ body.is-locked { overflow: hidden; }
     linear-gradient(180deg, #0F0F12 0%, #16090D 55%, #0F0F12 100%);
 }
 
+/* Ambient light that drifts slowly across the gradient sections, so a long
+   scroll never sits on a completely static background. Sits under the
+   content (z-10) and under the grain (z-3). */
+.mesh-wine::before,
+.mesh-ember::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  top: 34%;
+  left: 62%;
+  width: 62vmax;
+  height: 62vmax;
+  margin: -31vmax 0 0 -31vmax;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 228, 208, 0.17), rgba(255, 228, 208, 0) 72%);
+  animation: meshDrift 30s ease-in-out infinite alternate;
+}
+.mesh-ember::before {
+  background: radial-gradient(closest-side, rgba(245, 166, 35, 0.13), rgba(245, 166, 35, 0) 72%);
+  animation-duration: 38s;
+  animation-direction: alternate-reverse;
+}
+@keyframes meshDrift {
+  0%   { transform: translate(-8%, 6%)  scale(1); }
+  50%  { transform: translate(14%, -9%) scale(1.2); }
+  100% { transform: translate(-3%, 12%) scale(0.92); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mesh-wine::before, .mesh-ember::before { animation: none; }
+}
+
 /* --------------------------------------------------------------------------
    Preloader
    -------------------------------------------------------------------------- */

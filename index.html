@@ -11,7 +11,17 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="ERA SENIORS — Seniors. Wear. Strategy." />
 <meta property="og:description" content="Graduation-class apparel, designed and manufactured in-house. Est. 2026." />
-<meta property="og:image" content="assets/img/brand/logo-mark.jpeg" />
+<meta property="og:image" content="https://tahaghazi.github.io/era-seniors/assets/img/brand/logo-mark.jpeg" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="871" />
+<meta property="og:url" content="https://tahaghazi.github.io/era-seniors/" />
+<meta property="og:site_name" content="ERA SENIORS" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ar_EG" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ERA SENIORS — Seniors. Wear. Strategy." />
+<meta name="twitter:description" content="Graduation-class apparel, designed and manufactured in-house. Est. 2026." />
+<meta name="twitter:image" content="https://tahaghazi.github.io/era-seniors/assets/img/brand/logo-mark.jpeg" />
 
 <link rel="icon" href="assets/img/brand/logo-mark.jpeg" />
 
@@ -121,7 +131,7 @@
 </header>
 
 <!-- Mobile menu -->
-<div id="mobile-menu" class="fixed inset-0 z-[95] mesh-wine grain lg:hidden">
+<div id="mobile-menu" class="fixed inset-0 z-[95] mesh-wine grain lg:hidden overflow-hidden">
   <div class="relative z-10 h-full flex flex-col justify-center px-8 gap-1">
     <a href="#story"       class="logotype text-5xl text-bone py-2" data-en="Story"       data-ar="قصتنا">Story</a>
     <a href="#identity"    class="logotype text-5xl text-bone py-2" data-en="Identity"    data-ar="الهوية">Identity</a>
@@ -139,17 +149,17 @@
 <!-- ══════════════════════════════════════════════════════════════════════
      HERO
      ══════════════════════════════════════════════════════════════════════ -->
-<section class="relative min-h-[100svh] mesh-wine grain overflow-hidden flex flex-col">
+<section id="hero" class="relative min-h-[100svh] mesh-wine grain overflow-hidden flex flex-col">
 
   <!-- Floating poster fragments (parallax) -->
   <div class="pointer-events-none absolute inset-0 hidden md:block" aria-hidden="true">
-    <img src="assets/img/designs/seniors-cover.jpeg" alt=""
+    <img decoding="async" width="1024" height="1280" src="assets/img/designs/seniors-cover.jpeg" alt=""
          data-speed="-1.4"
          class="absolute left-[3%] top-[20%] w-[150px] lg:w-[195px] rotate-[-8deg] rounded-sm shadow-2xl shadow-black/60 opacity-90" />
-    <img src="assets/img/designs/new-era.jpeg" alt=""
+    <img decoding="async" width="1024" height="1280" src="assets/img/designs/new-era.jpeg" alt=""
          data-speed="1.9"
          class="absolute right-[4%] top-[16%] w-[135px] lg:w-[175px] rotate-[7deg] rounded-sm shadow-2xl shadow-black/60 opacity-90" />
-    <img src="assets/img/designs/quarter.jpeg" alt=""
+    <img decoding="async" width="1024" height="1280" src="assets/img/designs/quarter.jpeg" alt=""
          data-speed="-2.4"
          class="absolute right-[9%] bottom-[12%] w-[120px] lg:w-[155px] rotate-[-5deg] rounded-sm shadow-2xl shadow-black/60 opacity-80" />
   </div>
@@ -157,13 +167,13 @@
   <!-- Corner marks -->
   <div class="relative z-10 pt-[92px] px-5 sm:px-8 lg:px-14 flex justify-between text-[10px] tracking-brand text-bone/60">
     <span>EST. 2026</span>
-    <span class="hidden sm:block">CAIRO · CAMPUS</span>
+    <span class="hidden sm:block">ARCHITECTS OF YOUR ERA</span>
     <span>@ERA_SENIORS</span>
   </div>
 
   <!-- Centre lockup -->
   <div class="relative z-10 flex-1 grid place-items-center px-5 text-center">
-    <div>
+    <div id="hero-lockup">
       <div class="flex items-center justify-center gap-4 sm:gap-8 text-[9px] sm:text-[10px] tracking-brand text-bone/70 mb-8"
            data-reveal style="--d:200ms">
         <span data-en="SENIORS" data-ar="الدفعات">SENIORS</span>
@@ -229,7 +239,7 @@
 
     <div class="lg:col-span-5 order-2 lg:order-1" data-reveal="left">
       <div class="relative">
-        <img src="assets/img/brand/banner-manifesto.jpeg"
+        <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-manifesto.jpeg"
              alt="ERA Seniors manifesto banner: we don't just make clothes, we are the architects of your historical era"
              class="w-full rounded-sm shadow-2xl shadow-black/70" />
         <div class="absolute -bottom-5 -right-5 bg-ember text-white px-5 py-3 text-[9px] tracking-brand hidden sm:block">
@@ -241,7 +251,7 @@
     <div class="lg:col-span-7 order-1 lg:order-2" data-stagger="120">
       <div class="flex items-center gap-4 mb-8" data-reveal>
         <span class="w-10 h-px bg-ember"></span>
-        <span class="text-[10px] tracking-brand text-ember" data-en="01 — MANIFESTO" data-ar="٠١ — البيان">01 — MANIFESTO</span>
+        <span class="text-[10px] tracking-brand text-ember" data-scramble data-en="01 — MANIFESTO" data-ar="٠١ — البيان">01 — MANIFESTO</span>
       </div>
 
       <h2 class="font-serif text-[clamp(2rem,5vw,4rem)] leading-[1.06] text-bone" data-reveal
@@ -296,7 +306,7 @@
 
     <div class="flex items-center gap-4 mb-14" data-reveal>
       <span class="w-10 h-px bg-champagne"></span>
-      <span class="text-[10px] tracking-brand text-champagne" data-en="02 — WHO WE ARE" data-ar="٠٢ — احنا مين">02 — WHO WE ARE</span>
+      <span class="text-[10px] tracking-brand text-champagne" data-scramble data-en="02 — WHO WE ARE" data-ar="٠٢ — احنا مين">02 — WHO WE ARE</span>
     </div>
 
     <!-- ─────────────── CHAPTER 01 ─────────────── -->
@@ -307,7 +317,7 @@
         <div class="chapter-label text-champagne/70 mb-7" data-reveal>
           <span class="text-[10px] tracking-brand">CHAPTER 01 / 03</span>
           <span class="chapter-label__line"></span>
-          <span class="font-ar text-[13px]" dir="rtl">احنا مين وقصتنا</span>
+          <span class="font-ar text-[13px]" lang="ar" dir="rtl">احنا مين وقصتنا</span>
         </div>
 
         <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone" data-reveal="clip"
@@ -319,7 +329,7 @@
         <!-- Verbatim Arabic from the brand deck — illuminates word by word on scroll -->
         <div class="mt-10 relative pl-6" data-reveal>
           <span class="quote-rail absolute left-0 top-0 bottom-0 w-[2px] bg-ember/60 origin-top"></span>
-          <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" dir="rtl" data-scroll-words>
+          <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" lang="ar" dir="rtl" data-scroll-words>
             إحنا فريق من الطلبة وأصحاب المصانع، جمعنا بين فهمنا للدفعات واحتياجاتها،
             وبين خبرة التصنيع والتنفيذ؛ علشان نقدم تجربة متكاملة للدفعة، مش مجرد قطعة ملابس.
           </p>
@@ -352,16 +362,16 @@
 
       <!-- Banner column — each panel wipes open, then drifts at its own rate -->
       <div class="lg:col-span-6 grid grid-cols-2 gap-4 sm:gap-6" data-stagger="160">
-        <img src="assets/img/brand/banner-story.jpeg" data-reveal="clip" data-speed="-1.1"
+        <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-story.jpeg" data-reveal="clip" data-speed="-1.1"
              alt="ERA Seniors brand banner — who we are and our story, in Arabic"
              class="w-full rounded-sm shadow-2xl shadow-black/60" />
-        <img src="assets/img/brand/banner-about.jpeg" data-reveal="clip" data-speed="1.3"
+        <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-about.jpeg" data-reveal="clip" data-speed="1.3"
              alt="ERA Seniors brand banner — what we are about, in Arabic"
              class="w-full rounded-sm shadow-2xl shadow-black/60 mt-10" />
-        <img src="assets/img/brand/banner-goal.jpeg" data-reveal="clip" data-speed="-0.7"
+        <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-goal.jpeg" data-reveal="clip" data-speed="-0.7"
              alt="ERA Seniors brand banner — our goal, in Arabic"
              class="w-full rounded-sm shadow-2xl shadow-black/60" />
-        <img src="assets/img/brand/banner-purpose.jpeg" data-reveal="clip" data-speed="0.9"
+        <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-purpose.jpeg" data-reveal="clip" data-speed="0.9"
              alt="ERA Seniors brand banner — and most importantly, in Arabic"
              class="w-full rounded-sm shadow-2xl shadow-black/60 mt-10" />
       </div>
@@ -377,9 +387,9 @@
             <span class="text-[10px] tracking-brand">CHAPTER 02 / 03</span>
             <span class="chapter-label__line"></span>
           </div>
-          <span class="font-ar text-4xl sm:text-5xl text-gold/85 leading-none" dir="rtl" data-reveal="mark">هدفنا&hellip;</span>
+          <span class="font-ar text-4xl sm:text-5xl text-gold/85 leading-none" lang="ar" dir="rtl" data-reveal="mark">هدفنا&hellip;</span>
         </div>
-        <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" dir="rtl" data-scroll-words>
+        <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" lang="ar" dir="rtl" data-scroll-words>
           سواء كانت سنة تخرج، احتفال، أو أي حاجة حابين تعملوها كدفعة.
           هدفنا إننا ناخد الفكرة من مجرد كلام، ونحولها لحاجة حقيقية تعيش معاك.
         </p>
@@ -397,9 +407,9 @@
             <span class="text-[10px] tracking-brand">CHAPTER 03 / 03</span>
             <span class="chapter-label__line"></span>
           </div>
-          <span class="font-ar text-4xl sm:text-5xl text-ember/90 leading-none" dir="rtl" data-reveal="mark">والأهم&hellip;</span>
+          <span class="font-ar text-4xl sm:text-5xl text-ember/90 leading-none" lang="ar" dir="rtl" data-reveal="mark">والأهم&hellip;</span>
         </div>
-        <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" dir="rtl" data-scroll-words>
+        <p class="font-ar text-right text-[17px] leading-[2] text-bone/85" lang="ar" dir="rtl" data-scroll-words>
           ERA مش تابع لدفعة معينة، ولا معمول لناس بعينها. إحنا بنحاول نكون موجودين مع كل الدفعات،
           ونساعد كل دفعة إنها تعمل حاجتها بطريقتها، وبالتفاصيل اللي تمثلها. دي الـ ERA بتاعتنا.
         </p>
@@ -423,7 +433,7 @@
       <div data-reveal>
         <div class="flex items-center gap-4 mb-6">
           <span class="w-10 h-px bg-champagne"></span>
-          <span class="text-[10px] tracking-brand text-champagne" data-en="03 — BRAND IDENTITY" data-ar="٠٣ — الهوية">03 — BRAND IDENTITY</span>
+          <span class="text-[10px] tracking-brand text-champagne" data-scramble data-en="03 — BRAND IDENTITY" data-ar="٠٣ — الهوية">03 — BRAND IDENTITY</span>
         </div>
         <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone"
             data-en="The system behind the look." data-ar="النظام اللي ورا الشكل.">
@@ -441,7 +451,7 @@
     <div class="grid md:grid-cols-3 gap-5 mb-20" data-stagger="120">
 
       <div class="relative overflow-hidden rounded-sm aspect-[4/3] tilt" data-reveal="scale" data-tilt="6">
-        <img src="assets/img/brand/logo-mark.jpeg" alt="ERA Seniors primary logotype on wine gradient"
+        <img loading="lazy" decoding="async" width="1280" height="871" src="assets/img/brand/logo-mark.jpeg" alt="ERA Seniors primary logotype on wine gradient"
              class="absolute inset-0 w-full h-full object-cover" />
         <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-ink/95 to-transparent">
           <div class="text-[10px] tracking-brand text-champagne">PRIMARY LOCKUP</div>
@@ -604,7 +614,7 @@
       <div data-reveal>
         <div class="flex items-center gap-4 mb-6">
           <span class="w-10 h-px bg-champagne"></span>
-          <span class="text-[10px] tracking-brand text-champagne" data-en="04 — BUSINESS BANNERS" data-ar="٠٤ — بانرات الأعمال">04 — BUSINESS BANNERS</span>
+          <span class="text-[10px] tracking-brand text-champagne" data-scramble data-en="04 — BUSINESS BANNERS" data-ar="٠٤ — بانرات الأعمال">04 — BUSINESS BANNERS</span>
         </div>
         <h2 class="font-serif text-[clamp(2rem,5vw,4rem)] leading-[1.02] text-bone"
             data-en="Banners built for the feed." data-ar="بانرات مصممة للسوشيال.">
@@ -621,42 +631,42 @@
 
   <div class="hscroll flex gap-5 overflow-x-auto pb-8 px-5 sm:px-8 lg:px-14 snap-x snap-mandatory cursor-grab select-none">
     <figure class="snap-start shrink-0 w-[240px] sm:w-[300px]" data-reveal="scale">
-      <img src="assets/img/brand/banner-gradient.jpeg" alt="ERA Seniors story banner — gradient with brand marks"
+      <img loading="lazy" decoding="async" width="720" height="1280" src="assets/img/brand/banner-gradient.jpeg" alt="ERA Seniors story banner — gradient with brand marks"
            class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
       <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">STORY 9:16 — GRADIENT BASE</figcaption>
     </figure>
     <figure class="snap-start shrink-0 w-[300px] sm:w-[380px]" data-reveal="scale">
-      <img src="assets/img/brand/logo-mark.jpeg" alt="ERA Seniors logo banner"
+      <img loading="lazy" decoding="async" width="1280" height="871" src="assets/img/brand/logo-mark.jpeg" alt="ERA Seniors logo banner"
            class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
       <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">COVER 16:11 — LOGOTYPE</figcaption>
     </figure>
     <figure class="snap-start shrink-0 w-[280px] sm:w-[340px]" data-reveal="scale">
-      <img src="assets/img/brand/banner-manifesto.jpeg" alt="ERA Seniors manifesto banner"
+      <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-manifesto.jpeg" alt="ERA Seniors manifesto banner"
            class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
       <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">POST 4:5 — MANIFESTO</figcaption>
     </figure>
     <figure class="snap-start shrink-0 w-[280px] sm:w-[340px]" data-reveal="scale">
-      <img src="assets/img/brand/banner-about.jpeg" alt="ERA Seniors about banner in Arabic"
+      <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-about.jpeg" alt="ERA Seniors about banner in Arabic"
            class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
       <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">POST 4:5 — WHAT WE ARE ABOUT</figcaption>
     </figure>
     <figure class="snap-start shrink-0 w-[280px] sm:w-[340px]" data-reveal="scale">
-      <img src="assets/img/brand/banner-story.jpeg" alt="ERA Seniors story banner in Arabic"
+      <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-story.jpeg" alt="ERA Seniors story banner in Arabic"
            class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
       <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">POST 4:5 — OUR STORY</figcaption>
     </figure>
     <figure class="snap-start shrink-0 w-[280px] sm:w-[340px]" data-reveal="scale">
-      <img src="assets/img/brand/banner-goal.jpeg" alt="ERA Seniors banner — our goal, in Arabic"
+      <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-goal.jpeg" alt="ERA Seniors banner — our goal, in Arabic"
            class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
       <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">POST 4:5 — OUR GOAL</figcaption>
     </figure>
     <figure class="snap-start shrink-0 w-[280px] sm:w-[340px]" data-reveal="scale">
-      <img src="assets/img/brand/banner-purpose.jpeg" alt="ERA Seniors banner — and most importantly, in Arabic"
+      <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-purpose.jpeg" alt="ERA Seniors banner — and most importantly, in Arabic"
            class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
       <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">POST 4:5 — AND MOST IMPORTANTLY</figcaption>
     </figure>
     <figure class="snap-start shrink-0 w-[280px] sm:w-[340px]" data-reveal="scale">
-      <img src="assets/img/brand/banner-process.jpeg" alt="ERA Seniors banner — the seven-stage process diagram, in Arabic"
+      <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-process.jpeg" alt="ERA Seniors banner — the seven-stage process diagram, in Arabic"
            class="w-full rounded-sm shadow-2xl shadow-black/50 pointer-events-none" draggable="false" />
       <figcaption class="mt-4 text-[10px] tracking-brand text-bone/50">POST 4:5 — PROCESS DIAGRAM</figcaption>
     </figure>
@@ -673,7 +683,7 @@
       <div data-reveal>
         <div class="flex items-center gap-4 mb-6">
           <span class="w-10 h-px bg-ember"></span>
-          <span class="text-[10px] tracking-brand text-ember" data-en="05 — SAMPLE DESIGNS" data-ar="٠٥ — نماذج التصميم">05 — SAMPLE DESIGNS</span>
+          <span class="text-[10px] tracking-brand text-ember" data-scramble data-en="05 — SAMPLE DESIGNS" data-ar="٠٥ — نماذج التصميم">05 — SAMPLE DESIGNS</span>
         </div>
         <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone"
             data-en="Selected work." data-ar="مختارات من شغلنا.">Selected work.</h2>
@@ -694,10 +704,10 @@
 
     <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-stagger="90">
 
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Futures — Winter Varsity" data-reveal="scale"
                data-cat="seniors campaign" data-title="Futures — Winter Varsity" data-tag="Seniors Collection · Winter" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/futures.jpeg" alt="FUTURES campaign poster — navy and cream ERA varsity jackets" class="w-full h-full object-cover" loading="lazy" />
+          <img decoding="async" width="1024" height="1280" src="assets/img/designs/futures.jpeg" alt="FUTURES campaign poster — navy and cream ERA varsity jackets" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -707,10 +717,10 @@
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">01</div>
       </article>
 
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: New Collection — Coming Soon" data-reveal="scale"
                data-cat="seniors" data-title="New Collection — Coming Soon" data-tag="Seniors Collection · Teaser" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/new-collection.jpeg" alt="New collection coming soon teaser — ERA varsity jacket" class="w-full h-full object-cover" loading="lazy" />
+          <img decoding="async" width="1024" height="1280" src="assets/img/designs/new-collection.jpeg" alt="New collection coming soon teaser — ERA varsity jacket" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -720,10 +730,10 @@
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">02</div>
       </article>
 
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Seniors — Fall Issue" data-reveal="scale"
                data-cat="campaign" data-title="Seniors — Fall Issue" data-tag="Campaign · Editorial cover" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/seniors-cover.jpeg" alt="SENIORS fall issue magazine-style cover in red and cyan" class="w-full h-full object-cover" loading="lazy" />
+          <img decoding="async" width="1024" height="1280" src="assets/img/designs/seniors-cover.jpeg" alt="SENIORS fall issue magazine-style cover in red and cyan" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -733,10 +743,10 @@
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">03</div>
       </article>
 
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Seniors Collection — Key Visual" data-reveal="scale"
                data-cat="seniors" data-title="Seniors Collection — Key Visual" data-tag="Seniors Collection · Key visual" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/seniors-collection.jpeg" alt="Seniors Collection key visual on warm taupe backdrop" class="w-full h-full object-cover" loading="lazy" />
+          <img decoding="async" width="1024" height="1280" src="assets/img/designs/seniors-collection.jpeg" alt="Seniors Collection key visual on warm taupe backdrop" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -746,10 +756,10 @@
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">04</div>
       </article>
 
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Do More Of What You Love" data-reveal="scale"
                data-cat="campaign" data-title="Do More Of What You Love" data-tag="Campaign · Daily motivation" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/do-more.jpeg" alt="Do more of what you love — red typographic campaign poster" class="w-full h-full object-cover" loading="lazy" />
+          <img decoding="async" width="1024" height="1280" src="assets/img/designs/do-more.jpeg" alt="Do more of what you love — red typographic campaign poster" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -759,10 +769,10 @@
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">05</div>
       </article>
 
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Semi Seniors — NEW" data-reveal="scale"
                data-cat="semi" data-title="Semi Seniors — NEW" data-tag="Semi / Seniors 2027 · Drop" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/new-quarterzip.jpeg" alt="ERA Semi Seniors quarter-zip with hand-drawn NEW lettering" class="w-full h-full object-cover" loading="lazy" />
+          <img decoding="async" width="1024" height="1280" src="assets/img/designs/new-quarterzip.jpeg" alt="ERA Semi Seniors quarter-zip with hand-drawn NEW lettering" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -772,10 +782,10 @@
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">06</div>
       </article>
 
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Limited Pieces. Sharp Tailoring." data-reveal="scale"
                data-cat="semi campaign" data-title="Limited Pieces. Sharp Tailoring." data-tag="Semi / Seniors 2027 · Editorial" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/limited-pieces.jpeg" alt="Editorial layout with numbered notes over a maroon and black quarter-zip" class="w-full h-full object-cover" loading="lazy" />
+          <img decoding="async" width="1024" height="1280" src="assets/img/designs/limited-pieces.jpeg" alt="Editorial layout with numbered notes over a maroon and black quarter-zip" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -785,10 +795,10 @@
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">07</div>
       </article>
 
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: New Era — Casual Seniors Wear" data-reveal="scale"
                data-cat="semi" data-title="New Era — Casual Seniors Wear" data-tag="Semi / Seniors 2027 · Poster" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/new-era.jpeg" alt="NEW ERA poster in red and marigold with maroon quarter-zip" class="w-full h-full object-cover" loading="lazy" />
+          <img decoding="async" width="1024" height="1280" src="assets/img/designs/new-era.jpeg" alt="NEW ERA poster in red and marigold with maroon quarter-zip" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -798,10 +808,10 @@
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">08</div>
       </article>
 
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Semi / Senior 2027 — Lookbook" data-reveal="scale"
                data-cat="semi" data-title="Semi / Senior 2027 — Lookbook" data-tag="Semi / Seniors 2027 · Lookbook" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/browser-stack.jpeg" alt="Stacked browser-window lookbook layout on a red court backdrop" class="w-full h-full object-cover" loading="lazy" />
+          <img decoding="async" width="1024" height="1280" src="assets/img/designs/browser-stack.jpeg" alt="Stacked browser-window lookbook layout on a red court backdrop" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -811,10 +821,10 @@
         <div class="absolute top-4 left-4 text-[9px] tracking-brand text-bone/70 bg-ink/60 backdrop-blur px-3 py-1.5">09</div>
       </article>
 
-      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" data-reveal="scale"
+      <article class="tile group relative cursor-pointer rounded-sm overflow-hidden" tabindex="0" role="button" aria-label="Open preview: Quarter — This Is The New Season" data-reveal="scale"
                data-cat="semi campaign" data-title="Quarter — This Is The New Season" data-tag="Semi / Seniors 2027 · Campaign" data-cursor="Open">
         <div class="tile__media aspect-[4/5]">
-          <img src="assets/img/designs/quarter.jpeg" alt="QUARTER campaign layout over a maroon quarter-zip in an interior scene" class="w-full h-full object-cover" loading="lazy" />
+          <img decoding="async" width="1024" height="1280" src="assets/img/designs/quarter.jpeg" alt="QUARTER campaign layout over a maroon quarter-zip in an interior scene" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="tile__overlay absolute inset-0"></div>
         <div class="tile__meta absolute bottom-0 inset-x-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -846,7 +856,7 @@
       <div data-reveal>
         <div class="flex items-center gap-4 mb-6">
           <span class="w-10 h-px bg-champagne"></span>
-          <span class="text-[10px] tracking-brand text-champagne" data-en="06 — THE TEAM" data-ar="٠٦ — الفريق">06 — THE TEAM</span>
+          <span class="text-[10px] tracking-brand text-champagne" data-scramble data-en="06 — THE TEAM" data-ar="٠٦ — الفريق">06 — THE TEAM</span>
         </div>
         <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone"
             data-en="Half campus. Half factory floor." data-ar="نص جامعة. ونص مصنع.">
@@ -939,7 +949,7 @@
       <div class="lg:col-span-7" data-stagger="110">
         <div class="flex items-center gap-4 mb-6" data-reveal>
           <span class="w-10 h-px bg-gold"></span>
-          <span class="text-[10px] tracking-brand text-gold" data-en="07 — HOW IT WORKS" data-ar="٠٧ — إزاي بنشتغل">07 — HOW IT WORKS</span>
+          <span class="text-[10px] tracking-brand text-gold" data-scramble data-en="07 — HOW IT WORKS" data-ar="٠٧ — إزاي بنشتغل">07 — HOW IT WORKS</span>
         </div>
         <h2 class="font-serif text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.02] text-bone max-w-[20ch]" data-reveal
             data-en="With you from the first idea, at every step."
@@ -954,7 +964,7 @@
       </div>
 
       <div class="lg:col-span-5" data-reveal="right">
-        <img src="assets/img/brand/banner-process.jpeg"
+        <img loading="lazy" decoding="async" width="1024" height="1280" src="assets/img/brand/banner-process.jpeg"
              alt="ERA Seniors process diagram — planning, design, fabric, production, quality check, packaging and delivery"
              class="w-full rounded-sm shadow-2xl shadow-black/70" />
       </div>
@@ -976,7 +986,7 @@
             </svg>
           </div>
           <div class="mt-5 text-[9px] tracking-brand text-bone/35">01</div>
-          <div class="mt-2 font-ar text-xl text-bone" dir="rtl">التخطيط</div>
+          <div class="mt-2 font-ar text-xl text-bone" lang="ar" dir="rtl">التخطيط</div>
           <div class="mt-1 text-[9px] tracking-brand text-champagne/70">PLANNING</div>
           <p class="mt-3 mx-auto max-w-[26ch] text-[12px] leading-[1.7] text-bone/50"
              data-en="Committee meeting: the pieces, the head-count, the budget and the date it all has to land."
@@ -994,7 +1004,7 @@
             </svg>
           </div>
           <div class="mt-5 text-[9px] tracking-brand text-bone/35">02</div>
-          <div class="mt-2 font-ar text-xl text-bone" dir="rtl">التصميم</div>
+          <div class="mt-2 font-ar text-xl text-bone" lang="ar" dir="rtl">التصميم</div>
           <div class="mt-1 text-[9px] tracking-brand text-champagne/70">DESIGN</div>
           <p class="mt-3 mx-auto max-w-[26ch] text-[12px] leading-[1.7] text-bone/50"
              data-en="Crest, year and colourway drawn on the real silhouette until the committee signs it off."
@@ -1012,7 +1022,7 @@
             </svg>
           </div>
           <div class="mt-5 text-[9px] tracking-brand text-bone/35">03</div>
-          <div class="mt-2 font-ar text-xl text-bone" dir="rtl">القماش</div>
+          <div class="mt-2 font-ar text-xl text-bone" lang="ar" dir="rtl">القماش</div>
           <div class="mt-1 text-[9px] tracking-brand text-champagne/70">FABRIC</div>
           <p class="mt-3 mx-auto max-w-[26ch] text-[12px] leading-[1.7] text-bone/50"
              data-en="Chosen by weight and hand-feel, then sourced before a single stitch is cut."
@@ -1031,7 +1041,7 @@
             </svg>
           </div>
           <div class="mt-5 text-[9px] tracking-brand text-bone/35">04</div>
-          <div class="mt-2 font-ar text-xl text-bone" dir="rtl">التنفيذ</div>
+          <div class="mt-2 font-ar text-xl text-bone" lang="ar" dir="rtl">التنفيذ</div>
           <div class="mt-1 text-[9px] tracking-brand text-champagne/70">PRODUCTION</div>
           <p class="mt-3 mx-auto max-w-[26ch] text-[12px] leading-[1.7] text-bone/50"
              data-en="Cut, sewn and embroidered on our own line — no outsourcing, no surprises."
@@ -1049,7 +1059,7 @@
             </svg>
           </div>
           <div class="mt-5 text-[9px] tracking-brand text-bone/35">05</div>
-          <div class="mt-2 font-ar text-xl text-bone" dir="rtl">التدقيق</div>
+          <div class="mt-2 font-ar text-xl text-bone" lang="ar" dir="rtl">التدقيق</div>
           <div class="mt-1 text-[9px] tracking-brand text-champagne/70">QUALITY CHECK</div>
           <p class="mt-3 mx-auto max-w-[26ch] text-[12px] leading-[1.7] text-bone/50"
              data-en="Every piece inspected against the approved sample before it leaves the floor."
@@ -1067,7 +1077,7 @@
             </svg>
           </div>
           <div class="mt-5 text-[9px] tracking-brand text-bone/35">06</div>
-          <div class="mt-2 font-ar text-xl text-bone" dir="rtl">التغليف</div>
+          <div class="mt-2 font-ar text-xl text-bone" lang="ar" dir="rtl">التغليف</div>
           <div class="mt-1 text-[9px] tracking-brand text-champagne/70">PACKAGING</div>
           <p class="mt-3 mx-auto max-w-[26ch] text-[12px] leading-[1.7] text-bone/50"
              data-en="Bagged and labelled by student name and size, so handover day takes minutes."
@@ -1086,7 +1096,7 @@
             </svg>
           </div>
           <div class="mt-5 text-[9px] tracking-brand text-bone/35">07</div>
-          <div class="mt-2 font-ar text-xl text-bone" dir="rtl">النقل</div>
+          <div class="mt-2 font-ar text-xl text-bone" lang="ar" dir="rtl">النقل</div>
           <div class="mt-1 text-[9px] tracking-brand text-champagne/70">DELIVERY</div>
           <p class="mt-3 mx-auto max-w-[26ch] text-[12px] leading-[1.7] text-bone/50"
              data-en="One drop to campus, with spare sizes held back for exchanges."
@@ -1108,7 +1118,7 @@
     <div class="lg:col-span-5" data-stagger="110">
       <div class="flex items-center gap-4 mb-6" data-reveal>
         <span class="w-10 h-px bg-champagne"></span>
-        <span class="text-[10px] tracking-brand text-champagne" data-en="08 — START A CLASS ORDER" data-ar="٠٨ — ابدأ طلب دفعتك">08 — START A CLASS ORDER</span>
+        <span class="text-[10px] tracking-brand text-champagne" data-scramble data-en="08 — START A CLASS ORDER" data-ar="٠٨ — ابدأ طلب دفعتك">08 — START A CLASS ORDER</span>
       </div>
 
       <h2 class="font-serif text-[clamp(2.4rem,6vw,5rem)] leading-[0.98] text-bone" data-reveal
@@ -1135,6 +1145,7 @@
           <span class="text-bone group-hover:text-champagne transition-colors">hello@eraseniors.com</span>
         </a>
         <div class="flex items-center justify-between border-b border-bone/15 pb-4">
+          <!-- REPLACE ME: "Within 24 hours" is a promise we wrote for you, not one you stated. Confirm or change it. -->
           <span class="text-[10px] tracking-brand text-bone/45">RESPONSE TIME</span>
           <span class="text-bone">Within 24 hours</span>
         </div>
@@ -1150,7 +1161,7 @@
         </div>
         <div class="field" data-reveal>
           <label for="f-uni">University / class *</label>
-          <input id="f-uni" name="university" type="text" placeholder="e.g. Cairo University — Class of 2027" required />
+          <input id="f-uni" name="university" type="text" placeholder="e.g. Faculty of Engineering — Class of 2027" required />
         </div>
         <div class="field" data-reveal>
           <label for="f-product">Product</label>

@@ -53,7 +53,7 @@ assets/
 
 ## Things to fill in
 
-Search `index.html` for **`REPLACE ME`** — there are three:
+Search `index.html` for **`REPLACE ME`** — there are four:
 
 1. **Team names** (`#team`) — four cards currently read *"Your Name"*. Swap the names and roles.
    To add photos, drop files in `assets/img/team/` and replace the monogram
@@ -71,9 +71,25 @@ Search `index.html` for **`REPLACE ME`** — there are three:
 3. **Email address** — `hello@eraseniors.com` appears in the contact list and in
    `data-email` on the same form.
 
-Also worth checking: the stat strip in the Manifesto section (`2026 / 02 / S–XXL / 100%`).
-The seven process stages come straight from your own diagram; only the one-line description
-under each stage is written copy, so adjust any that don't match how you actually work.
+4. **"Within 24 hours"** — a response-time promise written for you, not one you stated.
+   It appears twice in the contact section. Confirm it or change it.
+
+### Claims to confirm
+
+Everything below was written to fit your brand, but is not something your deck states.
+It is all live on a public URL, so it is worth a read-through:
+
+| Claim | Where | Basis |
+|---|---|---|
+| `100%` in-house production | Manifesto stat strip | Inferred from "طلبة وأصحاب المصانع" |
+| `02` collections live | Manifesto stat strip | Seniors + Semi/Seniors 2027 |
+| `S–XXL` size range | Manifesto stat strip | From the FUTURES poster ("SIZE XXL – S") |
+| Team roles (4 cards) | Team section | Inferred from your story |
+| Stage descriptions (7) | Process section | Stage *names* are yours; the one-liners are written copy |
+| "Within 24 hours" | Contact | Written copy |
+
+`EST. 2026`, `@era_seniors`, the manifesto line, the collection names and the seven
+process stage names all come directly from your assets.
 
 ---
 
@@ -100,14 +116,29 @@ inside `index.html`. Change them in both places to re-skin the site.
 ## Interactions
 
 Preloader with real image-decode progress · custom trailing cursor with contextual
-labels · per-character hero reveal · IntersectionObserver scroll reveals with auto-stagger ·
+labels · per-character hero reveal · **hero scroll-exit** (drift, swell, fade) ·
+**section labels that decode themselves on first view** (character pool drawn from the
+target string, so Arabic scrambles with Arabic glyphs) · **ambient light drifting across
+the gradient sections** · IntersectionObserver scroll reveals with auto-stagger ·
 scroll-linked parallax · magnetic buttons · 3D card tilt · velocity-reactive marquees ·
 animated counters · scroll-spy nav + progress bar · click-to-copy colour swatches ·
 gallery filtering · keyboard- and swipe-navigable lightbox · drag-to-scroll banner strip ·
 EN/AR toggle with RTL switching · form validation with WhatsApp/email handoff.
 
+**Story section** is its own scroll sequence: a chapter rail that fills with reading
+progress, three chapter dots, word-by-word illumination on every Arabic paragraph and its
+translation, clip-path panel wipes with four parallax rates, and a one-shot sheen across
+each chapter card.
+
 Everything respects `prefers-reduced-motion`, and the custom cursor, magnetics and tilt
 only activate on fine-pointer devices.
+
+## Performance notes
+
+Images carry explicit `width`/`height` (no layout shift) and everything below the fold is
+`loading="lazy" decoding="async"`. Total image payload is **~2.0 MB** across 18 JPEGs.
+Converting them to WebP would cut that by roughly 60–70% — worth doing before you push the
+link to a whole graduating class on mobile data.
 
 ---
 
