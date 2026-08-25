@@ -320,8 +320,26 @@ body.is-locked { overflow: hidden; }
 .team-card__rule { transform: scaleX(0); transform-origin: left; transition: transform .6s var(--ease-out-expo); }
 .team-card:hover .team-card__rule { transform: scaleX(1); }
 
-.step__num { transition: color .4s, transform .4s var(--ease-out-expo); }
-.step:hover .step__num { color: var(--era-red); transform: translateX(6px); }
+/* Process pipeline stages */
+.stage__icon {
+  transition: border-color .45s var(--ease-out-expo),
+              background-color .45s, color .45s, transform .45s var(--ease-out-expo);
+}
+.stage:hover .stage__icon {
+  border-color: var(--era-amber);
+  color: var(--era-amber);
+  transform: translateY(-6px) scale(1.06);
+}
+.stage:hover .stage__icon svg { animation: stageNudge .5s var(--ease-out-expo); }
+@keyframes stageNudge {
+  0%   { transform: scale(1); }
+  45%  { transform: scale(0.88); }
+  100% { transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stage:hover .stage__icon { transform: none; }
+  .stage:hover .stage__icon svg { animation: none; }
+}
 
 /* Horizontal scroll strip */
 .hscroll {

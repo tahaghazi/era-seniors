@@ -41,12 +41,12 @@ assets/
 |---|---------|--------------|
 | — | Hero | Kinetic `ERA` logotype, parallax poster fragments, brand marquee |
 | 01 | Manifesto | The brand line + stat strip |
-| 02 | Story | Your original Arabic copy with an English translation alongside |
+| 02 | Story | Your Arabic copy verbatim — who we are, هدفنا, والأهم — each with an English translation |
 | 03 | Brand identity | Logo lockups, 10-colour palette, type specimen |
-| 04 | Banners | Drag-scrollable strip of the business banners |
+| 04 | Banners | Drag-scrollable strip of all eight business banners |
 | 05 | Sample designs | Filterable 10-piece gallery with lightbox |
 | 06 | Team | Four cards (placeholders — see below) |
-| 07 | Process | Brief → design → sampling → production |
+| 07 | Process | Your seven-stage pipeline: التخطيط → التصميم → القماش → التنفيذ → التدقيق → التغليف → النقل |
 | 08 | Contact | Enquiry form that hands off to WhatsApp or email |
 
 ---
@@ -71,8 +71,9 @@ Search `index.html` for **`REPLACE ME`** — there are three:
 3. **Email address** — `hello@eraseniors.com` appears in the contact list and in
    `data-email` on the same form.
 
-Also worth checking: the stat strip in the Manifesto section (`2026 / 02 / S–XXL / 100%`)
-and the process copy — both are written from your brand deck, but the numbers are yours to confirm.
+Also worth checking: the stat strip in the Manifesto section (`2026 / 02 / S–XXL / 100%`).
+The seven process stages come straight from your own diagram; only the one-line description
+under each stage is written copy, so adjust any that don't match how you actually work.
 
 ---
 
