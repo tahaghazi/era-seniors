@@ -40,7 +40,13 @@ body.is-locked { overflow: hidden; }
 .font-serif-era { font-family: 'Bodoni Moda', 'Playfair Display', Georgia, serif; }
 .font-poster    { font-family: 'Anton', 'Archivo Black', Impact, sans-serif; }
 .font-body      { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-.font-ar        { font-family: 'Tajawal', 'Cairo', 'Segoe UI', sans-serif; }
+/* Arabic face. The class is doubled to raise specificity to (0,2,0): the EN/AR
+   toggle adds .font-ar at runtime to elements that already carry .logotype or
+   Tailwind's .font-serif, and both of those map to Bodoni Moda, which has no
+   Arabic glyphs. A single class would lose to .logotype on source order, and to
+   the Tailwind utilities on injection order (the CDN appends its stylesheet
+   after this file). Doubling wins in every case without !important. */
+.font-ar.font-ar { font-family: 'Tajawal', 'Cairo', 'Segoe UI', sans-serif; }
 
 .tracking-brand { letter-spacing: 0.42em; }
 
