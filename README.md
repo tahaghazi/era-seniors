@@ -30,7 +30,7 @@ assets/
   css/style.css             brand tokens, grain, gradients, all animation CSS
   js/app.js                 shared interaction modules, no dependencies
   img/brand/                logotype + eight business banners
-  img/designs/              ten sample designs
+  img/designs/              19 design pieces (10 original JPEG + 9 newer WebP)
   img/products/             13 products x card+full WebP (91 files, 6.2 MB)
   img/team/                 (empty — drop team headshots here)
 ```
@@ -49,7 +49,7 @@ edit it directly like any other page.
 | 02 | Story | Your Arabic copy verbatim — who we are, هدفنا, والأهم — each with an English translation |
 | 03 | Brand identity | Logo lockups, 10-colour palette, type specimen |
 | 04 | Banners | Drag-scrollable strip of all eight business banners |
-| 05 | Sample designs | Filterable 10-piece gallery with lightbox |
+| 05 | Selected work | Filterable 19-piece design gallery with lightbox |
 | 06 | Team | Four cards (placeholders — see below) |
 | 07 | Process | Your seven-stage pipeline: التخطيط → التصميم → القماش → التنفيذ → التدقيق → التغليف → النقل |
 | 08 | Contact | Enquiry form that hands off to WhatsApp or email |
@@ -113,6 +113,39 @@ Search `index.html` for **`REPLACE ME`** — there are four:
 
 4. **"Within 24 hours"** — a response-time promise written for you, not one you stated.
    It appears twice in the contact section. Confirm it or change it.
+
+### Selected work — what was added, and what was left out
+
+The gallery went from 10 pieces to **19**, with a new **Heritage** filter beside
+All / Seniors / Semi 2027 / Campaign.
+
+Source was `Desktop/jacket` — 102 image files. 59 were exact duplicates of each other
+and were dropped automatically. Of the 43 that remained, **9 are genuine poster or
+graphic-design work** and went in:
+
+| Added | Category |
+|---|---|
+| ERA Brings Something New (full-page ad) | Campaign |
+| Order Yours Before You Regret It (flat-lay ad) | Campaign |
+| ERA Seniors logotype lockup | Campaign |
+| Saudi Arabia 1932 — 2026 key graphic | Heritage |
+| Heritage print layout | Heritage |
+| Saudi Arabia patterned tee graphic | Heritage |
+| السعودية wave tee graphic | Heritage |
+| Heritage portrait artwork | Heritage |
+| Seniors hoodie front & back design | Seniors |
+
+The other 34 were deliberately left out, because Selected Work is a *design* gallery:
+
+- **9** on-model / product shots — those belong on `products.html`, and most are already there
+- **4** plain garment mockups on white or black — no design content
+- **14** reference and inspiration images from other brands (ASSERTIVE UNIFY, Gamma 1874 and various tees) — not ERA work, and not yours to publish
+- **6** personal photographs of people (gym, street, group shots)
+- **1** composite that was just two of the selected tee graphics side by side
+
+Two of the new pieces are landscape, so they span two grid columns at 16:9 rather than
+being cropped into a 4:5 portrait tile. The nine new pieces also carry `data-full`, so the
+lightbox loads a 1600px version instead of the card.
 
 ### About the product photography
 
