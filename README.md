@@ -31,7 +31,7 @@ assets/
   js/app.js                 shared interaction modules, no dependencies
   img/brand/                logotype + eight business banners
   img/designs/              ten sample designs
-  img/products/             12 products x card+full WebP (84 files, 5.4 MB)
+  img/products/             13 products x card+full WebP (91 files, 6.2 MB)
   img/team/                 (empty — drop team headshots here)
 ```
 
@@ -59,13 +59,35 @@ edit it directly like any other page.
 | # | Section | What's in it |
 |---|---------|--------------|
 | — | Hero | Campaign poster, style/shot counts, catalogue marquee |
-| 01 | The range | 12 product boxes, filterable by category, multi-shot lightbox |
+| 01 | The range | 13 product boxes, filterable by category, multi-shot lightbox |
 | 02 | Colourways | Six fabric colours (click to copy) + size range + customisation |
 | 03 | Lookbook | Two full-bleed campaign shots |
 
-The 12 products: varsity jacket (maroon and navy), wool coach jacket, quarter zip
-(black and maroon), seniors hoodie, four heritage tees, sweatpants, and the university tote.
-39 shots in total — click any box to page through that product's shots.
+**The 13 products — 44 shots in total.** Click any box to page through that product's shots.
+
+| # | Product | Colourway | Shots |
+|---|---------|-----------|-------|
+| 01 | Varsity Jacket | Maroon / Cream | 5 |
+| 02 | Varsity Jacket | Navy / Cream | 6 |
+| 03 | Wool Coach Jacket | Maroon | 5 |
+| 04 | Zip Hoodie | Maroon — Semi Seniors 2027 | 3 |
+| 05 | Seniors Hoodie | Maroon (SENIORS★ back print) | 5 |
+| 06 | Quarter Zip | Black | 7 |
+| 07 | Quarter Zip | Maroon | 2 |
+| 08 | Heritage Tee | Emerald — KSA Emblem | 2 |
+| 09 | Heritage Tee | Emerald — Wave Print | 2 |
+| 10 | Heritage Tee | Cream — Wave Print | 2 |
+| 11 | Heritage Tee | Navy — KSA Emblem | 2 |
+| 12 | Heritage Tee | Cream — Portrait Print | 2 |
+| 13 | ERA University Tote | Natural Canvas | 1 |
+
+Every unique image in the source folder is placed against a product — nothing is orphaned.
+Three shots do double duty: two also serve as lookbook images, and the tote shot also
+belongs to the black quarter zip.
+
+There is **no sweatpants product** on the page. Sweatpants appear styled in many shots,
+but the source folder has no standalone sweatpants shot to build a box around — add one
+and it becomes a 14th product.
 
 ---
 
@@ -171,10 +193,13 @@ only activate on fine-pointer devices.
 Images carry explicit `width`/`height` (no layout shift) and everything below the fold is
 `loading="lazy" decoding="async"`.
 
-Product images are **WebP at two sizes** — an 820px card and a 1500px full — generated from
-the 1792×2400 originals. The 39 product shots plus 3 campaign shots come to 5.4 MB on disk,
-but a first visit to `products.html` only pulls the 12 visible cards (~16–74 KB each); full
-sizes load on demand when the lightbox opens.
+Product images are **WebP at two sizes** — an 820px card and a 1500px full, never upscaled
+above the source. The 44 product shots plus 3 campaign shots come to 6.2 MB on disk, but a
+first visit to `products.html` only pulls the 13 visible cards (~15–75 KB each); full sizes
+load on demand when the lightbox opens.
+
+The Arabic face is **Tajawal**; English keeps Bodoni Moda (display), Anton (poster) and
+Inter (body).
 
 The brand and design images on `index.html` are still JPEG (~2.0 MB). Converting those to
 WebP the same way would cut them by roughly 60–70%.
